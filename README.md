@@ -70,6 +70,20 @@ The table below is generated automatically from the registry and latest daily ob
 
 An access-denied status means that this public test account was refused authentication or SUBSCRIBE permission. It **does not** mean the MQTT broker is offline. Broker operators may intentionally restrict subscriptions or change public credentials. This directory respects those restrictions and never bypasses access controls. The check is from GitHub Actions, so network-based limits may produce different results elsewhere.
 
+## Documented limitations of selected public accounts
+
+The directory reports **actual MQTT results**, even when restrictions are intentional. Public credentials used for uploading node telemetry do not necessarily grant full broker read access. The notes below link to operator documentation, not to unverified workarounds.
+
+| Broker | Public-account limitation |
+|---|---|
+| [Meshtastic Spain](https://meshtastic.es/docs/mapas/) | Official node credentials are still documented, but GitHub Actions receives CONNACK 135; subscriber access is not confirmed. |
+| [Meshtastic Portugal](https://meshtastic.pt/getstarted) | Published credentials receive CONNACK 135 from GitHub Actions. The [operator documents automated IPv4 restrictions](https://meshtastic.pt/unblock); the cause of this specific refusal remains unconfirmed. |
+| [LoRaItalia](https://www.loraitalia.it/d0b9f8a5-7046-4dfd-bab5-61c6fac55dc8/) | The operator documents per-node MQTT root topics; the broad directory subscription is refused. |
+| [BG Mesh Bulgaria](https://meshmap.motaba.net/) | The operator explicitly documents an uplink-only broker with downlink disabled; SUBSCRIBE denial is expected. |
+| [SA Mesh Australia](https://wiki.samesh.au/meshtastic/mqtt-gateways) | Historical credentials are for an `uplink` account; read access is unconfirmed and the tested SUBSCRIBE is refused. |
+
+For connectivity-monitoring purposes these endpoints stay listed. The daily checker does not bypass ACLs, try leaked credentials, or publish MQTT data.
+
 ## Status definitions
 
 | Status | Meaning |

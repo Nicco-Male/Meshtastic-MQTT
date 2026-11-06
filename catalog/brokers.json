@@ -242,7 +242,8 @@
     "username": "meshdev",
     "password": "large4cats",
     "topic": "msh/EU_868/#",
-    "source_url": "https://meshtastic.es"
+    "source_url": "https://meshtastic.es/docs/mapas/",
+    "access_notes": "The operator still advertises these credentials for node uplinks, but the GitHub runner receives CONNACK 135. Public subscriber access is not verified."
   },
   {
     "id": "portugal",
@@ -255,7 +256,8 @@
     "username": "meshdev",
     "password": "large4cats",
     "topic": "msh/#",
-    "source_url": "https://meshtastic.pt"
+    "source_url": "https://meshtastic.pt/getstarted",
+    "access_notes": "The operator advertises these credentials but also applies automated IPv4 bans. CONNACK 135 does not prove an outage; a public subscriber login is not verified."
   },
   {
     "id": "portugal-iot",
@@ -305,7 +307,9 @@
     "tls": false,
     "username": "meshdev",
     "password": "large4cats",
-    "topic": "msh/#"
+    "topic": "msh/#",
+    "source_url": "https://meshmap.motaba.net/",
+    "access_notes": "The operator explicitly documents this broker as uplink-only, with downlink disabled. SUBSCRIBE denial is expected."
   },
   {
     "id": "australia-sa",
@@ -317,7 +321,9 @@
     "tls": false,
     "username": "uplink",
     "password": "uplink",
-    "topic": "msh/ANZ/SA/#"
+    "topic": "msh/ANZ/SA/#",
+    "source_url": "https://wiki.samesh.au/meshtastic/mqtt-gateways",
+    "access_notes": "Historical public uplink credentials are documented, but public read permissions are not. SUBSCRIBE was denied; current operator access policy needs confirmation."
   },
   {
     "id": "netherlands-meshnet",
@@ -432,6 +438,7 @@
     "username": "loraitalia",
     "password": "itmesh",
     "topic": "msh/EU_868/IT/#",
-    "source_url": "https://loraitalia.it"
+    "source_url": "https://www.loraitalia.it/d0b9f8a5-7046-4dfd-bab5-61c6fac55dc8/",
+    "access_notes": "The operator documents per-node root topics and does not guarantee downlink reception. The broad msh/EU_868/IT/# subscription is denied; directory-wide read access is not confirmed."
   }
 ]

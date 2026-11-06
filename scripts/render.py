@@ -53,10 +53,12 @@ def page():
         c = escape
         link = (f'<a href="{c(e["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">Source ↗</a>'
                 if e.get('source_url') else '—')
+        policy_note = (f'<small class="policy-note">{c(e["access_notes"])}</small>'
+                       if e.get('access_notes') else '')
         table.append(f'''<tr data-filter="{c((e['country']+' '+e['region']+' '+e['name']+' '+e['host']).lower(), quote=True)}" data-status="{css}">
 <td><span class="country">{c(e['country'])}</span> <strong>{c(e['name'])}</strong><small>{c(e['region'])}</small></td>
 <td><code>{c(e['host'])}:{e['port']}</code><small>{tls} · <code>{c(e['topic'])}</code></small></td>
-<td><span class="status {css}">{c(label)}</span><small>{c(r.get('detail',''))}</small></td>
+<td><span class="status {css}">{c(label)}</span><small>{c(r.get('detail',''))}</small>{policy_note}</td>
 <td class="numeric">{c(sample)}</td><td class="numeric">{uptime}</td><td><small>{c(last)}</small>{link}</td></tr>''')
         md.append(f"| {e['country']} | `{e['host']}:{e['port']}` | `{e['topic']}` | **{label}** | {uptime} |")
     css = '''
@@ -67,7 +69,7 @@ h1{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em;line-height:1.1;margin:1
 .summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:26px 0}.tile{border:1px solid #263850;border-radius:12px;padding:18px;background:#111e30}
 .tile .number{font-size:31px;font-weight:750;letter-spacing:-.05em}.tile .detail{font-size:12px;color:#aebcd0}.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 12px}
 input,select{background:#0f1a2b;color:#e8edf5;border:1px solid #324762;border-radius:8px;font:inherit;padding:11px 13px}input{flex:1;min-width:230px}select{min-width:160px}
-.tablewrap{overflow-x:auto;border:1px solid #29394f;border-radius:12px}table{width:100%;border-collapse:collapse;min-width:980px}th{position:sticky;top:0;background:#18273b;color:#abc0da;text-transform:uppercase;letter-spacing:.08em;font-size:11px;text-align:left;padding:12px 14px}td{padding:13px 14px;border-top:1px solid #25364a;vertical-align:top}tr:hover{background:#15253a}td strong{font-weight:650}small{display:block;font-size:12px;color:#93a7bf;margin-top:4px;max-width:490px;overflow-wrap:anywhere}code{font-size:12px;color:#d5e3f6;overflow-wrap:anywhere}.country{display:inline-block;border:1px solid #41546d;border-radius:4px;font-size:11px;padding:1px 5px;margin-right:7px;color:#a9c6e1}
+.tablewrap{overflow-x:auto;border:1px solid #29394f;border-radius:12px}table{width:100%;border-collapse:collapse;min-width:980px}th{position:sticky;top:0;background:#18273b;color:#abc0da;text-transform:uppercase;letter-spacing:.08em;font-size:11px;text-align:left;padding:12px 14px}td{padding:13px 14px;border-top:1px solid #25364a;vertical-align:top}tr:hover{background:#15253a}td strong{font-weight:650}small{display:block;font-size:12px;color:#93a7bf;margin-top:4px;max-width:490px;overflow-wrap:anywhere}code{font-size:12px;color:#d5e3f6;overflow-wrap:anywhere}small.policy-note{color:#e7c494}.country{display:inline-block;border:1px solid #41546d;border-radius:4px;font-size:11px;padding:1px 5px;margin-right:7px;color:#a9c6e1}
 .status{display:inline-block;font-size:11px;letter-spacing:.03em;font-weight:750;border-radius:6px;padding:4px 7px;white-space:nowrap}.live{background:#153f35;color:#77e4b3}.idle{background:#203951;color:#9fcaff}.blocked{background:#50331d;color:#ffcc91}.down{background:#4d2431;color:#ffa6b7}.unknown{background:#2b3442;color:#c7d2de}.numeric{font-variant-numeric:tabular-nums;white-space:nowrap}
 footer{margin-top:25px;border-top:1px solid #27374a;padding-top:20px;font-size:13px;color:#a8b8cc}h2{font-size:19px;margin-top:30px} .muted{color:#91a7be}
 @media(max-width:780px){main{padding:24px 12px 60px}.summary{grid-template-columns:repeat(2,1fr)}.tile{padding:12px}.tile .number{font-size:25px}}
