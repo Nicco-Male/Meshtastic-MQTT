@@ -39,14 +39,37 @@ jobs:
       - name: Generate public directory
         run: python scripts/render.py
       - name: Commit daily status and history
+        shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md data/status.json data/history.json docs/index.html
-          if ! git diff --cached --quiet; then
-            git commit -m "chore(status): daily MQTT broker checks [skip ci]"
-            git push
-          fi
+          set -euo pipefail
+          # Keep scan results while fetching the latest main branch.
+          cp data/status.json "$RUNNER_TEMP/mqtt-status.json"
+          cp data/history.json "$RUNNER_TEMP/mqtt-history.json"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            publish_dir="$RUNNER_TEMP/mqtt-publish-$attempt"
+            git worktree add --detach "$publish_dir" origin/main
+            cp "$RUNNER_TEMP/mqtt-status.json" "$publish_dir/data/status.json"
+            cp "$RUNNER_TEMP/mqtt-history.json" "$publish_dir/data/history.json"
+            # Regenerate using the latest committed README and renderer,
+            # preserving concurrent documentation edits.
+            python "$publish_dir/scripts/render.py"
+            git -C "$publish_dir" config user.name "github-actions[bot]"
+            git -C "$publish_dir" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git -C "$publish_dir" add README.md data/status.json data/history.json docs/index.html
+            if git -C "$publish_dir" diff --cached --quiet; then
+              echo "No status changes to publish."
+              exit 0
+            fi
+            git -C "$publish_dir" commit -m "chore(status): daily MQTT broker checks [skip ci]"
+            if git -C "$publish_dir" push origin HEAD:main; then
+              echo "Status published successfully."
+              exit 0
+            fi
+            echo "main changed during publication; retrying ($attempt/3)."
+          done
+          echo "::error::Could not publish MQTT status after 3 attempts."
+          exit 1
 
   publish_pages:
     name: Publish public dashboard
