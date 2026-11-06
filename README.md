@@ -11,7 +11,7 @@ Find community-operated MQTT brokers around the world, check their current statu
 
 ## Public Meshtastic world map
 
-Meshtastic MQTT network activity is also available on **[WorldMap](https://worldmap.niccomale.it)**, a public network map. This broker directory monitors MQTT connectivity independently of the map.
+Meshtastic MQTT network activity is also available on **[WorldMap](https://worldmap.niccomale.it/map)**, a public network map. This broker directory monitors MQTT connectivity independently of the map.
 
 ## What is monitored?
 
