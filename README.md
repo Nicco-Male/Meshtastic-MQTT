@@ -9,6 +9,10 @@ Find community-operated MQTT brokers around the world, check their current statu
 
 **[Live dashboard](https://nicco-male.github.io/Meshtastic-MQTT/)** · **[Broker registry](catalog/brokers.json)** · **[Latest checks (JSON)](data/status.json)** · **[90-day history (JSON)](data/history.json)** · **[Contribute](CONTRIBUTING.md)**
 
+## Public Meshtastic world map
+
+Meshtastic MQTT network activity is also available on **[WorldMap](https://worldmap.niccomale.it)**, a public network map. This broker directory monitors MQTT connectivity independently of the map.
+
 ## What is monitored?
 
 The `Check community MQTT brokers` GitHub Actions workflow runs daily at **05:17 UTC** (subject to GitHub scheduling delays) and can also be started manually. It directly connects to registered public broker endpoints using only **operator-published community credentials**, or anonymous access when explicitly available.
