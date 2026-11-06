@@ -53,11 +53,13 @@ def page():
         c = escape
         link = (f'<a href="{c(e["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">Source ↗</a>'
                 if e.get('source_url') else '—')
+        documented_root = (f'<small>Operator-documented publish root: <code>{c(e["documented_root"])}</code></small>'
+                           if e.get('documented_root') else '')
         policy_note = (f'<small class="policy-note">{c(e["access_notes"])}</small>'
                        if e.get('access_notes') else '')
         table.append(f'''<tr data-filter="{c((e['country']+' '+e['region']+' '+e['name']+' '+e['host']).lower(), quote=True)}" data-status="{css}">
 <td><span class="country">{c(e['country'])}</span> <strong>{c(e['name'])}</strong><small>{c(e['region'])}</small></td>
-<td><code>{c(e['host'])}:{e['port']}</code><small>{tls} · <code>{c(e['topic'])}</code></small></td>
+<td><code>{c(e['host'])}:{e['port']}</code><small>{tls} · Probe subscription: <code>{c(e['topic'])}</code></small>{documented_root}</td>
 <td><span class="status {css}">{c(label)}</span><small>{c(r.get('detail',''))}</small>{policy_note}</td>
 <td class="numeric">{c(sample)}</td><td class="numeric">{uptime}</td><td><small>{c(last)}</small>{link}</td></tr>''')
         md.append(f"| {e['country']} | `{e['host']}:{e['port']}` | `{e['topic']}` | **{label}** | {uptime} |")
@@ -84,7 +86,7 @@ footer{margin-top:25px;border-top:1px solid #27374a;padding-top:20px;font-size:1
 <p class="muted"><strong>Access restricted is not offline:</strong> a broker may be reachable but deny the public account or topic. This directory respects operator access controls and never attempts to bypass them.</p>
 <p class="muted">Last checked: <strong>{escape(at)}</strong> · Probe location: GitHub Actions (reachability may differ from other networks). 30-check availability = share of tests with successful MQTT connection and subscription; not an SLA.</p>
 <div class="toolbar"><input id="find" type="search" placeholder="Search country, community or hostname…" aria-label="Search brokers"><select id="filter" aria-label="Filter by status"><option value="all">All statuses</option><option value="live">Live traffic</option><option value="idle">Online / idle</option><option value="blocked">Access denied</option><option value="down">Connection issues</option><option value="unknown">Not yet tested</option></select></div>
-<div class="tablewrap"><table><thead><tr><th>Community</th><th>Endpoint and topic</th><th>MQTT status</th><th>Mesh / other messages</th><th>Last 30 checks</th><th>Last checked / source</th></tr></thead><tbody id="rows">{''.join(table)}</tbody></table></div>
+<div class="tablewrap"><table><thead><tr><th>Community</th><th>Endpoint / MQTT topics</th><th>MQTT status</th><th>Mesh / other messages</th><th>Last 30 checks</th><th>Last checked / source</th></tr></thead><tbody id="rows">{''.join(table)}</tbody></table></div>
 <h2>How to read the statuses</h2><p><strong>LIVE · MESH</strong> = non-retained PUBLISH observed on <code>msh/.../2/e/...</code> (Protobuf content is not validated). <strong>LIVE / OTHER</strong> = live traffic on other topics. <strong>ONLINE / IDLE</strong> = CONNACK and SUBACK accepted, but no live message received during the observation window. TCP, DNS, TLS and ACL errors are reported separately. One failed probe does not establish a global outage.</p>
 <footer>The directory uses only operator-published public community accounts; it does not store private credentials, MQTT payloads, node identifiers or private broker information. To add or correct a server, open a pull request. <a href="https://github.com/Nicco-Male/Meshtastic-MQTT">Source on GitHub ↗</a></footer>
 </main><script>

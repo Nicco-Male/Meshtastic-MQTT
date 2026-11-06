@@ -70,6 +70,18 @@ The table below is generated automatically from the registry and latest daily ob
 
 An access-denied status means that this public test account was refused authentication or SUBSCRIBE permission. It **does not** mean the MQTT broker is offline. Broker operators may intentionally restrict subscriptions or change public credentials. This directory respects those restrictions and never bypasses access controls. The check is from GitHub Actions, so network-based limits may produce different results elsewhere.
 
+## MQTT root topics vs. probe subscriptions
+
+A Meshtastic device's **MQTT root topic** defines where it publishes data. It is **not automatically a permission to subscribe** to the whole namespace. This directory independently attempts a read-only MQTT subscription and shows that specific filter as **Probe subscription**.
+
+- **Spain:** Documented root `msh/EU_868`; the published username and password match the directory, but authentication is rejected from GitHub Actions.
+- **Portugal:** Documented root `msh`; the published username and password match the directory, but authentication is rejected from GitHub Actions.
+- **LoRaItalia:** Documented roots are `msh/EU_868/{nodeID}` and `msh/EU_433/{nodeID}`, with the node ID **without an exclamation mark**. The old `msh/EU_868/IT/#` directory subscription is **not** the operator's documented root; it is retained only as the previously attempted probe filter.
+- **BG Mesh:** Documented as uplink-only with downlink disabled. A rejected read-only subscription is expected.
+- **SA:MUG / Peering SA:** The published `uplink` account and root `msh/ANZ/SA` are from a **legacy guide**. Reader permissions remain unconfirmed.
+
+The Meshtastic **encryption** option controls mesh payload handling and is not the MQTT **TLS** setting. All five of these guides specify no MQTT TLS in the configurations shown (where stated). Neither changing the topic nor turning off TLS fixes a `CONNACK 135` authentication refusal.
+
 ## Documented limitations of selected public accounts
 
 The directory reports **actual MQTT results**, even when restrictions are intentional. Public credentials used for uploading node telemetry do not necessarily grant full broker read access. The notes below link to operator documentation, not to unverified workarounds.
@@ -78,7 +90,7 @@ The directory reports **actual MQTT results**, even when restrictions are intent
 |---|---|
 | [Meshtastic Spain](https://meshtastic.es/docs/mapas/) | Official node credentials are still documented, but GitHub Actions receives CONNACK 135; subscriber access is not confirmed. |
 | [Meshtastic Portugal](https://meshtastic.pt/getstarted) | Published credentials receive CONNACK 135 from GitHub Actions. The [operator documents automated IPv4 restrictions](https://meshtastic.pt/unblock); the cause of this specific refusal remains unconfirmed. |
-| [LoRaItalia](https://www.loraitalia.it/d0b9f8a5-7046-4dfd-bab5-61c6fac55dc8/) | The operator documents per-node MQTT root topics; the broad directory subscription is refused. |
+| [LoRaItalia](https://www.loraitalia.it/d0b9f8a5-7046-4dfd-bab5-61c6fac55dc8/) | The operator documents per-node MQTT root topics; the directory's former subscription filter is refused; the documented root is per node. |
 | [BG Mesh Bulgaria](https://meshmap.motaba.net/) | The operator explicitly documents an uplink-only broker with downlink disabled; SUBSCRIBE denial is expected. |
 | [SA Mesh Australia](https://wiki.samesh.au/meshtastic/mqtt-gateways) | Historical credentials are for an `uplink` account; read access is unconfirmed and the tested SUBSCRIBE is refused. |
 
