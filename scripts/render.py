@@ -9,22 +9,22 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LABELS = {
     "LIVE_MESH_TOPIC": ("LIVE · MESH", "live"),
-    "LIVE_OTHER": ("LIVE · ALTRO", "live"),
-    "IDLE": ("ONLINE · SILENZIOSO", "idle"),
-    "SUBSCRIBE_DENIED": ("LETTURA NEGATA", "blocked"),
-    "AUTH_REJECTED": ("ACCESSO NEGATO", "blocked"),
-    "MQTT_REJECTED": ("CONNESSIONE RIFIUTATA", "blocked"),
-    "SUBSCRIBE_ERROR": ("ERRORE SUBSCRIBE", "blocked"),
-    "CONNECT_ERROR": ("ERRORE TCP", "down"),
-    "TCP_TIMEOUT": ("TIMEOUT TCP", "down"),
-    "DNS_ERROR": ("ERRORE DNS", "down"),
-    "TLS_ERROR": ("ERRORE TLS", "down"),
-    "TIMEOUT": ("TIMEOUT MQTT", "down"),
-    "SUBACK_TIMEOUT": ("TIMEOUT SUBACK", "down"),
-    "DISCONNECTED": ("DISCONNESSO", "down"),
-    "UNSAFE_ADDRESS": ("IP NON PUBBLICO", "blocked"),
-    "PROBE_ERROR": ("ERRORE SCANNER", "down"),
-    "UNTESTED": ("DA VERIFICARE", "unknown"),
+    "LIVE_OTHER": ("LIVE / OTHER", "live"),
+    "IDLE": ("ONLINE / IDLE", "idle"),
+    "SUBSCRIBE_DENIED": ("SUBSCRIBE DENIED", "blocked"),
+    "AUTH_REJECTED": ("ACCESS DENIED", "blocked"),
+    "MQTT_REJECTED": ("CONNECTION REJECTED", "blocked"),
+    "SUBSCRIBE_ERROR": ("SUBSCRIBE ERROR", "blocked"),
+    "CONNECT_ERROR": ("TCP ERROR", "down"),
+    "TCP_TIMEOUT": ("TCP TIMEOUT", "down"),
+    "DNS_ERROR": ("DNS ERROR", "down"),
+    "TLS_ERROR": ("TLS ERROR", "down"),
+    "TIMEOUT": ("MQTT TIMEOUT", "down"),
+    "SUBACK_TIMEOUT": ("SUBACK TIMEOUT", "down"),
+    "DISCONNECTED": ("DISCONNECTED", "down"),
+    "UNSAFE_ADDRESS": ("NON-PUBLIC IP", "blocked"),
+    "PROBE_ERROR": ("PROBE ERROR", "down"),
+    "UNTESTED": ("UNTESTED", "unknown"),
 }
 ONLINE = {"LIVE_MESH_TOPIC", "LIVE_OTHER", "IDLE"}
 
@@ -34,7 +34,7 @@ def page():
     status = json.loads((ROOT / 'data/status.json').read_text())
     history = json.loads((ROOT / 'data/history.json').read_text())
     observed = status.get('results', {})
-    at = status.get('checked_at') or 'Nessun controllo ancora eseguito'
+    at = status.get('checked_at') or 'No checks have run yet'
     counts = Counter((observed.get(e['id']) or {}).get('status', 'UNTESTED') for e in catalog)
     live = counts['LIVE_MESH_TOPIC'] + counts['LIVE_OTHER']
     online = live + counts['IDLE']
@@ -51,7 +51,7 @@ def page():
         tls = 'TLS' if e['tls'] else 'MQTT'
         sample = f"{r.get('mesh_messages', 0)} / {r.get('other_messages', 0)}" if r else '—'
         c = escape
-        link = (f'<a href="{c(e["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">Fonte ↗</a>'
+        link = (f'<a href="{c(e["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">Source ↗</a>'
                 if e.get('source_url') else '—')
         table.append(f'''<tr data-filter="{c((e['country']+' '+e['region']+' '+e['name']+' '+e['host']).lower(), quote=True)}" data-status="{css}">
 <td><span class="country">{c(e['country'])}</span> <strong>{c(e['name'])}</strong><small>{c(e['region'])}</small></td>
@@ -73,16 +73,16 @@ footer{margin-top:25px;border-top:1px solid #27374a;padding-top:20px;font-size:1
 @media(max-width:780px){main{padding:24px 12px 60px}.summary{grid-template-columns:repeat(2,1fr)}.tile{padding:12px}.tile .number{font-size:25px}}
 '''
     html = f'''<!doctype html>
-<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Meshtastic MQTT Directory · Community broker status</title><meta name="description" content="Catalogo indipendente dei broker MQTT comunitari Meshtastic con verifica giornaliera da GitHub Actions."><style>{css}</style></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meshtastic MQTT Directory · Community broker status</title><meta name="description" content="Independent directory of community-operated Meshtastic MQTT brokers with daily checks from GitHub Actions."><style>{css}</style></head>
 <body><main><div class="eyebrow">Open directory · MQTT · Meshtastic</div><h1>Meshtastic MQTT Directory</h1>
-<p>Registro indipendente dei broker MQTT delle comunità Meshtastic. Controlli automatici <strong>una volta al giorno</strong> da GitHub Actions: solo connessione e sottoscrizione, nessuna pubblicazione e nessuna lettura di server privati.</p>
-<section class="summary"><div class="tile"><div class="number">{len(catalog)}</div><div class="detail">Broker censiti</div></div><div class="tile"><div class="number">{online}</div><div class="detail">MQTT con lettura autorizzata</div></div><div class="tile"><div class="number">{live}</div><div class="detail">Traffico live osservato</div></div><div class="tile"><div class="number">{denied}</div><div class="detail">Accesso / SUBSCRIBE rifiutati</div></div></section>
-<p class="muted">Ultimo controllo: <strong>{escape(at)}</strong> · Sonda: GitHub Actions (la raggiungibilità può variare rispetto ad altre reti). Uptime = % di giorni con SUBACK e connessione attiva negli ultimi 30 test, non uptime SLA.</p>
-<div class="toolbar"><input id="find" type="search" placeholder="Cerca paese, comunità, hostname…" aria-label="Filtra broker"><select id="filter" aria-label="Filtra per stato"><option value="all">Tutti gli stati</option><option value="live">Traffico live</option><option value="idle">Online, silenzioso</option><option value="blocked">Accesso negato</option><option value="down">Problemi di connessione</option><option value="unknown">Non ancora verificati</option></select></div>
-<div class="tablewrap"><table><thead><tr><th>Comunità</th><th>Endpoint e topic</th><th>Stato MQTT</th><th>Live mesh / altri</th><th>Ultimi 30 test</th><th>Ultimo test / Fonte</th></tr></thead><tbody id="rows">{''.join(table)}</tbody></table></div>
-<h2>Come interpretare gli stati</h2><p><strong>LIVE · MESH</strong> = rilevato PUBLISH non-retained su <code>msh/.../2/e/...</code> (non viene validato il contenuto Protobuf). <strong>LIVE · ALTRO</strong> = traffico live su altri topic. <strong>ONLINE · SILENZIOSO</strong> = CONNACK e SUBACK accettati, ma nessun messaggio live durante la finestra di osservazione. Errori TCP, DNS, TLS e ACL sono separati. Una sonda fallita non prova che il broker sia inattivo globalmente.</p>
-<footer>Il catalogo usa soltanto account comunitari pubblicati dai gestori; non contiene credenziali private, payload MQTT, indirizzi di nodi o dettagli dei broker locali. Per proporre nuovi server o correggere informazioni, apri una pull request nel repository. <a href="https://github.com/Nicco-Male/Meshtastic-MQTT">Sorgenti su GitHub ↗</a></footer>
+<p>An open, independent directory of Meshtastic community MQTT brokers, automatically checked <strong>once per day</strong> from GitHub Actions. Read-only connections and subscriptions; no publishing and no private MQTT servers.</p>
+<section class="summary"><div class="tile"><div class="number">{len(catalog)}</div><div class="detail">Registered brokers</div></div><div class="tile"><div class="number">{online}</div><div class="detail">Accessible subscriptions</div></div><div class="tile"><div class="number">{live}</div><div class="detail">Live traffic observed</div></div><div class="tile"><div class="number">{denied}</div><div class="detail">Access or SUBSCRIBE denied</div></div></section>
+<p class="muted">Last checked: <strong>{escape(at)}</strong> · Probe location: GitHub Actions (reachability may differ from other networks). 30-check availability = share of tests with successful MQTT connection and subscription; not an SLA.</p>
+<div class="toolbar"><input id="find" type="search" placeholder="Search country, community or hostname…" aria-label="Search brokers"><select id="filter" aria-label="Filter by status"><option value="all">All statuses</option><option value="live">Live traffic</option><option value="idle">Online / idle</option><option value="blocked">Access denied</option><option value="down">Connection issues</option><option value="unknown">Not yet tested</option></select></div>
+<div class="tablewrap"><table><thead><tr><th>Community</th><th>Endpoint and topic</th><th>MQTT status</th><th>Mesh / other messages</th><th>Last 30 checks</th><th>Last checked / source</th></tr></thead><tbody id="rows">{''.join(table)}</tbody></table></div>
+<h2>How to read the statuses</h2><p><strong>LIVE · MESH</strong> = non-retained PUBLISH observed on <code>msh/.../2/e/...</code> (Protobuf content is not validated). <strong>LIVE / OTHER</strong> = live traffic on other topics. <strong>ONLINE / IDLE</strong> = CONNACK and SUBACK accepted, but no live message received during the observation window. TCP, DNS, TLS and ACL errors are reported separately. One failed probe does not establish a global outage.</p>
+<footer>The directory uses only operator-published public community accounts; it does not store private credentials, MQTT payloads, node identifiers or private broker information. To add or correct a server, open a pull request. <a href="https://github.com/Nicco-Male/Meshtastic-MQTT">Source on GitHub ↗</a></footer>
 </main><script>
 const input=document.getElementById('find'),sel=document.getElementById('filter');
 function apply(){{const q=input.value.trim().toLowerCase(),s=sel.value;for(const tr of document.querySelectorAll('#rows tr')){{tr.hidden=!(tr.dataset.filter.includes(q)&&(s==='all'||tr.dataset.status===s));}}}}
@@ -95,7 +95,7 @@ input.addEventListener('input',apply);sel.addEventListener('change',apply);
     end = '<!-- STATUS_TABLE_END -->'
     if start not in readme or end not in readme:
         raise ValueError('README status markers missing')
-    formatted = '| Paese | Broker | Topic | Stato | Ultimi 30 test |\n|---|---|---|---|---|\n' + '\n'.join(md)
+    formatted = '| Country | Broker | Topic | Status | Last 30 checks |\n|---|---|---|---|---|\n' + '\n'.join(md)
     readme = readme.split(start)[0] + start + '\n' + formatted + '\n' + end + readme.split(end, 1)[1]
     (ROOT / 'README.md').write_text(readme)
     print('Rendered docs/index.html and README.md from', len(catalog), 'broker records')

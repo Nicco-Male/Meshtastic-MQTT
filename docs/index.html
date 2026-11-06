@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meshtastic MQTT Directory · Community broker status</title><meta name="description" content="Independent directory of community-operated Meshtastic MQTT brokers with daily checks from GitHub Actions."><style>
+:root{color-scheme:dark;font:15px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0b1320;color:#e8edf5}
+*{box-sizing:border-box}body{margin:0}a{color:#7cc2ff;text-decoration:none}a:hover{text-decoration:underline}
+main{max-width:1440px;margin:auto;padding:34px 24px 80px}.eyebrow{color:#7cc2ff;text-transform:uppercase;font-size:12px;letter-spacing:.15em;font-weight:700}
+h1{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em;line-height:1.1;margin:10px 0 14px}p{color:#acb9ca;max-width:1000px}
+.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:26px 0}.tile{border:1px solid #263850;border-radius:12px;padding:18px;background:#111e30}
+.tile .number{font-size:31px;font-weight:750;letter-spacing:-.05em}.tile .detail{font-size:12px;color:#aebcd0}.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 12px}
+input,select{background:#0f1a2b;color:#e8edf5;border:1px solid #324762;border-radius:8px;font:inherit;padding:11px 13px}input{flex:1;min-width:230px}select{min-width:160px}
+.tablewrap{overflow-x:auto;border:1px solid #29394f;border-radius:12px}table{width:100%;border-collapse:collapse;min-width:980px}th{position:sticky;top:0;background:#18273b;color:#abc0da;text-transform:uppercase;letter-spacing:.08em;font-size:11px;text-align:left;padding:12px 14px}td{padding:13px 14px;border-top:1px solid #25364a;vertical-align:top}tr:hover{background:#15253a}td strong{font-weight:650}small{display:block;font-size:12px;color:#93a7bf;margin-top:4px;max-width:490px;overflow-wrap:anywhere}code{font-size:12px;color:#d5e3f6;overflow-wrap:anywhere}.country{display:inline-block;border:1px solid #41546d;border-radius:4px;font-size:11px;padding:1px 5px;margin-right:7px;color:#a9c6e1}
+.status{display:inline-block;font-size:11px;letter-spacing:.03em;font-weight:750;border-radius:6px;padding:4px 7px;white-space:nowrap}.live{background:#153f35;color:#77e4b3}.idle{background:#203951;color:#9fcaff}.blocked{background:#50331d;color:#ffcc91}.down{background:#4d2431;color:#ffa6b7}.unknown{background:#2b3442;color:#c7d2de}.numeric{font-variant-numeric:tabular-nums;white-space:nowrap}
+footer{margin-top:25px;border-top:1px solid #27374a;padding-top:20px;font-size:13px;color:#a8b8cc}h2{font-size:19px;margin-top:30px} .muted{color:#91a7be}
+@media(max-width:780px){main{padding:24px 12px 60px}.summary{grid-template-columns:repeat(2,1fr)}.tile{padding:12px}.tile .number{font-size:25px}}
+</style></head>
+<body><main><div class="eyebrow">Open directory · MQTT · Meshtastic</div><h1>Meshtastic MQTT Directory</h1>
+<p>An open, independent directory of Meshtastic community MQTT brokers, automatically checked <strong>once per day</strong> from GitHub Actions. Read-only connections and subscriptions; no publishing and no private MQTT servers.</p>
+<section class="summary"><div class="tile"><div class="number">34</div><div class="detail">Registered brokers</div></div><div class="tile"><div class="number">0</div><div class="detail">Accessible subscriptions</div></div><div class="tile"><div class="number">0</div><div class="detail">Live traffic observed</div></div><div class="tile"><div class="number">0</div><div class="detail">Access or SUBSCRIBE denied</div></div></section>
+<p class="muted">Last checked: <strong>No checks have run yet</strong> · Probe location: GitHub Actions (reachability may differ from other networks). 30-check availability = share of tests with successful MQTT connection and subscription; not an SLA.</p>
+<div class="toolbar"><input id="find" type="search" placeholder="Search country, community or hostname…" aria-label="Search brokers"><select id="filter" aria-label="Filter by status"><option value="all">All statuses</option><option value="live">Live traffic</option><option value="idle">Online / idle</option><option value="blocked">Access denied</option><option value="down">Connection issues</option><option value="unknown">Not yet tested</option></select></div>
+<div class="tablewrap"><table><thead><tr><th>Community</th><th>Endpoint and topic</th><th>MQTT status</th><th>Mesh / other messages</th><th>Last 30 checks</th><th>Last checked / source</th></tr></thead><tbody id="rows"><tr data-filter="am armenia meshtastic armenia mqtt.msh.am" data-status="unknown">
+<td><span class="country">AM</span> <strong>Meshtastic Armenia</strong><small>Armenia</small></td>
+<td><code>mqtt.msh.am:1883</code><small>MQTT · <code>msh/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://msh.am" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="au south australia peering sa mqtt.peeringsa.net" data-status="unknown">
+<td><span class="country">AU</span> <strong>Peering SA</strong><small>South Australia</small></td>
+<td><code>mqtt.peeringsa.net:1883</code><small>MQTT · <code>msh/ANZ/SA/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small>—</td></tr><tr data-filter="bg bulgaria bg mesh bgmesh.swat-bg.org" data-status="unknown">
+<td><span class="country">BG</span> <strong>BG Mesh</strong><small>Bulgaria</small></td>
+<td><code>bgmesh.swat-bg.org:1883</code><small>MQTT · <code>msh/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small>—</td></tr><tr data-filter="bg bulgaria motaba bulgaria meshqtt.motaba.net" data-status="unknown">
+<td><span class="country">BG</span> <strong>Motaba Bulgaria</strong><small>Bulgaria</small></td>
+<td><code>meshqtt.motaba.net:1883</code><small>MQTT · <code>msh/Bulgaria/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small>—</td></tr><tr data-filter="cl chile mesh chile mqtt.meshchile.cl" data-status="unknown">
+<td><span class="country">CL</span> <strong>Mesh Chile</strong><small>Chile</small></td>
+<td><code>mqtt.meshchile.cl:1883</code><small>MQTT · <code>msh/CL/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://meshchile.cl" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="cn china mess host china mqtt.mess.host" data-status="unknown">
+<td><span class="country">CN</span> <strong>Mess Host China</strong><small>China</small></td>
+<td><code>mqtt.mess.host:1883</code><small>MQTT · <code>msh/CN/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small>—</td></tr><tr data-filter="co colombia mesh colombia mqtt.meshcolombia.co" data-status="unknown">
+<td><span class="country">CO</span> <strong>Mesh Colombia</strong><small>Colombia</small></td>
+<td><code>mqtt.meshcolombia.co:1883</code><small>MQTT · <code>msh/CO/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://meshcolombia.co" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="cz czech republic aperturelab czech republic mqtt.aperturelab.cz" data-status="unknown">
+<td><span class="country">CZ</span> <strong>ApertureLab Czech Republic</strong><small>Czech Republic</small></td>
+<td><code>mqtt.aperturelab.cz:1883</code><small>MQTT · <code>msh/CZ/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small>—</td></tr><tr data-filter="de north rhine-westphalia mesh nrw nrw.iot-root.de" data-status="unknown">
+<td><span class="country">DE</span> <strong>Mesh NRW</strong><small>North Rhine-Westphalia</small></td>
+<td><code>nrw.iot-root.de:1883</code><small>MQTT · <code>msh/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small>—</td></tr><tr data-filter="de schleswig-holstein mesh sh mqtt.mesh-sh.de" data-status="unknown">
+<td><span class="country">DE</span> <strong>Mesh SH</strong><small>Schleswig-Holstein</small></td>
+<td><code>mqtt.mesh-sh.de:1883</code><small>MQTT · <code>msh/EU_868/DE/S-H/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://mesh-sh.de" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="es galicia comunidade o zulo mqtt.mesh.comunidadeozulo.org" data-status="unknown">
+<td><span class="country">ES</span> <strong>Comunidade O Zulo</strong><small>Galicia</small></td>
+<td><code>mqtt.mesh.comunidadeozulo.org:1883</code><small>MQTT · <code>msh/EU_868/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://comunidadeozulo.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="es spain meshtastic spain mqtt.meshtastic.es" data-status="unknown">
+<td><span class="country">ES</span> <strong>Meshtastic Spain</strong><small>Spain</small></td>
+<td><code>mqtt.meshtastic.es:1883</code><small>MQTT · <code>msh/EU_868/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://meshtastic.es" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="gb cumbria cumbria cq mqtt.cumbriacq.com" data-status="unknown">
+<td><span class="country">GB</span> <strong>Cumbria CQ</strong><small>Cumbria</small></td>
+<td><code>mqtt.cumbriacq.com:1883</code><small>MQTT · <code>msh/EU_868/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://cumbriacq.com" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="hr croatia cromesh mqtt.cromesh.eu" data-status="unknown">
+<td><span class="country">HR</span> <strong>CroMesh</strong><small>Croatia</small></td>
+<td><code>mqtt.cromesh.eu:1883</code><small>MQTT · <code>msh/EU_868/9A/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://cromesh.eu" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="it italy loraitalia mqtt.loraitalia.it" data-status="unknown">
+<td><span class="country">IT</span> <strong>LoRaItalia</strong><small>Italy</small></td>
+<td><code>mqtt.loraitalia.it:1883</code><small>MQTT · <code>msh/EU_868/IT/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://loraitalia.it" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="nl netherlands meshnet nl mqtt.meshnet.nl" data-status="unknown">
+<td><span class="country">NL</span> <strong>MeshNet NL</strong><small>Netherlands</small></td>
+<td><code>mqtt.meshnet.nl:1883</code><small>MQTT · <code>msh/EU_868/NL/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small>—</td></tr><tr data-filter="nl netherlands meshtnet nl mqtt.meshtnet.nl" data-status="unknown">
+<td><span class="country">NL</span> <strong>MeshtNet NL</strong><small>Netherlands</small></td>
+<td><code>mqtt.meshtnet.nl:1883</code><small>MQTT · <code>msh/EU_868/NL/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small>—</td></tr><tr data-filter="pl poland loranet poland loranet.pl" data-status="unknown">
+<td><span class="country">PL</span> <strong>LoRaNet Poland</strong><small>Poland</small></td>
+<td><code>loranet.pl:1883</code><small>MQTT · <code>msh/PL/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://loranet.pl" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="pt portugal meshtastic portugal mqtt.meshtastic.pt" data-status="unknown">
+<td><span class="country">PT</span> <strong>Meshtastic Portugal</strong><small>Portugal</small></td>
+<td><code>mqtt.meshtastic.pt:1883</code><small>MQTT · <code>msh/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://meshtastic.pt" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="pt portugal iot meshtastic portugal iot iot.meshtastic.pt" data-status="unknown">
+<td><span class="country">PT</span> <strong>Meshtastic Portugal IoT</strong><small>Portugal IoT</small></td>
+<td><code>iot.meshtastic.pt:1883</code><small>MQTT · <code>msh/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://meshtastic.pt" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="ro romania / eu868 meshmap romania mqtt.meshmap.ro" data-status="unknown">
+<td><span class="country">RO</span> <strong>MeshMap Romania</strong><small>Romania / EU868</small></td>
+<td><code>mqtt.meshmap.ro:1883</code><small>MQTT · <code>msh/EU_868/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://meshmap.ro" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="se sweden meshat sweden mqtt.meshat.se" data-status="unknown">
+<td><span class="country">SE</span> <strong>Meshat Sweden</strong><small>Sweden</small></td>
+<td><code>mqtt.meshat.se:1883</code><small>MQTT · <code>msh/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://meshat.se" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="si slovenia meshnet slovenia mqtt.meshnet.si" data-status="unknown">
+<td><span class="country">SI</span> <strong>MeshNet Slovenia</strong><small>Slovenia</small></td>
+<td><code>mqtt.meshnet.si:1883</code><small>MQTT · <code>msh/EU_868/SI/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://meshnet.si" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us georgia csra mesh mqtt.csramsh.net" data-status="unknown">
+<td><span class="country">US</span> <strong>CSRA Mesh</strong><small>Georgia</small></td>
+<td><code>mqtt.csramsh.net:1883</code><small>MQTT · <code>msh/US/GA/csramsh/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://csramsh.net" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us connecticut ct mesh mqtt.ctmesh.org" data-status="unknown">
+<td><span class="country">US</span> <strong>CT Mesh</strong><small>Connecticut</small></td>
+<td><code>mqtt.ctmesh.org:1883</code><small>MQTT · <code>msh/US/CT/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://ctmesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us chicago, illinois chimesh mqtt.chimesh.org" data-status="unknown">
+<td><span class="country">US</span> <strong>ChiMesh</strong><small>Chicago, Illinois</small></td>
+<td><code>mqtt.chimesh.org:1883</code><small>MQTT · <code>msh/US/IL/Chi/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://chimesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us st. louis, missouri meshstl mqtt.meshstl.org" data-status="unknown">
+<td><span class="country">US</span> <strong>MeshSTL</strong><small>St. Louis, Missouri</small></td>
+<td><code>mqtt.meshstl.org:1883</code><small>MQTT · <code>msh/US/MeshSTL/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://meshstl.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us ohio neo mesh mqtt.neomesh.org" data-status="unknown">
+<td><span class="country">US</span> <strong>NEO Mesh</strong><small>Ohio</small></td>
+<td><code>mqtt.neomesh.org:1883</code><small>MQTT · <code>msh/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://neomesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us new york ny mesh mqtt.nyme.sh" data-status="unknown">
+<td><span class="country">US</span> <strong>NY Mesh</strong><small>New York</small></td>
+<td><code>mqtt.nyme.sh:1883</code><small>MQTT · <code>msh/US/NY/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://nyme.sh" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us nashville nashmesh mqtt.nashme.sh" data-status="unknown">
+<td><span class="country">US</span> <strong>NashMesh</strong><small>Nashville</small></td>
+<td><code>mqtt.nashme.sh:1883</code><small>MQTT · <code>msh/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://nashme.sh" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us northern michigan northern michigan mesh mqtt.northernmichmesh.org" data-status="unknown">
+<td><span class="country">US</span> <strong>Northern Michigan Mesh</strong><small>Northern Michigan</small></td>
+<td><code>mqtt.northernmichmesh.org:8883</code><small>TLS · <code>msh/US/MI/NMI/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://northernmichmesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us rock river rock river mesh mqtt.rrmesh.net" data-status="unknown">
+<td><span class="country">US</span> <strong>Rock River Mesh</strong><small>Rock River</small></td>
+<td><code>mqtt.rrmesh.net:1883</code><small>MQTT · <code>msh/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://rrmesh.net" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us south carolina sc mesh mqtt.scmesh.us" data-status="unknown">
+<td><span class="country">US</span> <strong>SC Mesh</strong><small>South Carolina</small></td>
+<td><code>mqtt.scmesh.us:1883</code><small>MQTT · <code>msh/US/SC/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://scmesh.us" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us southern california socal mesh mqtt.socalmesh.org" data-status="unknown">
+<td><span class="country">US</span> <strong>SoCal Mesh</strong><small>Southern California</small></td>
+<td><code>mqtt.socalmesh.org:1883</code><small>MQTT · <code>msh/US/CA/socalmesh/#</code></small></td>
+<td><span class="status unknown">UNTESTED</span><small></small></td>
+<td class="numeric">—</td><td class="numeric">—</td><td><small>—</small><a href="https://socalmesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr></tbody></table></div>
+<h2>How to read the statuses</h2><p><strong>LIVE · MESH</strong> = non-retained PUBLISH observed on <code>msh/.../2/e/...</code> (Protobuf content is not validated). <strong>LIVE / OTHER</strong> = live traffic on other topics. <strong>ONLINE / IDLE</strong> = CONNACK and SUBACK accepted, but no live message received during the observation window. TCP, DNS, TLS and ACL errors are reported separately. One failed probe does not establish a global outage.</p>
+<footer>The directory uses only operator-published public community accounts; it does not store private credentials, MQTT payloads, node identifiers or private broker information. To add or correct a server, open a pull request. <a href="https://github.com/Nicco-Male/Meshtastic-MQTT">Source on GitHub ↗</a></footer>
+</main><script>
+const input=document.getElementById('find'),sel=document.getElementById('filter');
+function apply(){const q=input.value.trim().toLowerCase(),s=sel.value;for(const tr of document.querySelectorAll('#rows tr')){tr.hidden=!(tr.dataset.filter.includes(q)&&(s==='all'||tr.dataset.status===s));}}
+input.addEventListener('input',apply);sel.addEventListener('change',apply);
+</script></body></html>
