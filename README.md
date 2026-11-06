@@ -38,12 +38,12 @@ The table below is generated automatically from the registry and latest daily ob
 | CN | `mqtt.mess.host:1883` | `msh/CN/#` | **DNS ERROR** | 0% |
 | CO | `mqtt.meshcolombia.co:1883` | `msh/CO/#` | **LIVE · MESH** | 100% |
 | CZ | `mqtt.aperturelab.cz:1883` | `msh/CZ/#` | **LIVE · MESH** | 100% |
-| DE | `nrw.iot-root.de:1883` | `msh/#` | **ACCESS DENIED** | 0% |
+| DE | `nrw.iot-root.de:1883` | `msh/#` | **LIVE · MESH** | 100% |
 | DE | `mqtt.mesh-sh.de:1883` | `msh/EU_868/DE/S-H/#` | **LIVE · MESH** | 100% |
 | ES | `mqtt.mesh.comunidadeozulo.org:1883` | `msh/EU_868/#` | **ONLINE / IDLE** | 100% |
 | ES | `mqtt.meshtastic.es:1883` | `msh/EU_868/#` | **ACCESS DENIED** | 0% |
 | GB | `mqtt.cumbriacq.com:1883` | `msh/EU_868/#` | **TCP TIMEOUT** | 0% |
-| HR | `mqtt.cromesh.eu:1883` | `msh/EU_868/9A/#` | **LIVE / OTHER** | 100% |
+| HR | `mqtt.cromesh.eu:1883` | `msh/EU_868/9A/#` | **LIVE · MESH** | 100% |
 | IT | `mqtt.loraitalia.it:1883` | `msh/EU_868/IT/#` | **SUBSCRIBE DENIED** | 0% |
 | NL | `mqtt.meshnet.nl:1883` | `msh/EU_868/NL/#` | **DNS ERROR** | 0% |
 | NL | `mqtt.meshtnet.nl:1883` | `msh/EU_868/NL/#` | **DNS ERROR** | 0% |

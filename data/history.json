@@ -3,49 +3,49 @@
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 1
+      "mesh_messages": 2
     }
   ],
   "south-carolina": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 3
+      "mesh_messages": 1
     }
   ],
   "chicago": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 12
+      "mesh_messages": 1
     }
   ],
   "poland-loranet": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 332
+      "mesh_messages": 242
     }
   ],
   "czech": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 14
+      "mesh_messages": 3
     }
   ],
   "germany-sh": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 1
+      "mesh_messages": 3
     }
   ],
   "st-louis": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 4
+      "mesh_messages": 6
     }
   ],
   "romania": [
@@ -66,14 +66,14 @@
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 21
+      "mesh_messages": 3
     }
   ],
   "germany-nrw": [
     {
       "date": "2026-11-06",
-      "status": "AUTH_REJECTED",
-      "mesh_messages": 0
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 1376
     }
   ],
   "galicia": [
@@ -87,7 +87,7 @@
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 11
+      "mesh_messages": 3
     }
   ],
   "spain": [
@@ -156,8 +156,8 @@
   "cromesh": [
     {
       "date": "2026-11-06",
-      "status": "LIVE_OTHER",
-      "mesh_messages": 0
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 10
     }
   ],
   "northern-michigan": [
@@ -220,14 +220,14 @@
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 8
+      "mesh_messages": 2
     }
   ],
   "sweden": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 6
+      "mesh_messages": 8
     }
   ],
   "nashville": [
