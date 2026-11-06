@@ -66,6 +66,10 @@ The table below is generated automatically from the registry and latest daily ob
 | US | `mqtt.socalmesh.org:1883` | `msh/US/CA/socalmesh/#` | **LIVE · MESH** | 100% |
 <!-- STATUS_TABLE_END -->
 
+## Why do some brokers deny access?
+
+An access-denied status means that this public test account was refused authentication or SUBSCRIBE permission. It **does not** mean the MQTT broker is offline. Broker operators may intentionally restrict subscriptions or change public credentials. This directory respects those restrictions and never bypasses access controls. The check is from GitHub Actions, so network-based limits may produce different results elsewhere.
+
 ## Status definitions
 
 | Status | Meaning |
