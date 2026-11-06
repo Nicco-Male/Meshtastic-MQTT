@@ -2,57 +2,57 @@
   "colombia": [
     {
       "date": "2026-11-06",
-      "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 6
+      "status": "IDLE",
+      "mesh_messages": 0
     }
   ],
   "south-carolina": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 1
+      "mesh_messages": 4
     }
   ],
   "chicago": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 7
+      "mesh_messages": 4
     }
   ],
   "poland-loranet": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 375
+      "mesh_messages": 318
     }
   ],
   "czech": [
     {
       "date": "2026-11-06",
-      "status": "IDLE",
-      "mesh_messages": 0
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 1
     }
   ],
   "germany-sh": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 6
+      "mesh_messages": 4
     }
   ],
   "st-louis": [
     {
       "date": "2026-11-06",
-      "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 4
+      "status": "IDLE",
+      "mesh_messages": 0
     }
   ],
   "romania": [
     {
       "date": "2026-11-06",
-      "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 1
+      "status": "IDLE",
+      "mesh_messages": 0
     }
   ],
   "ctmesh": [
@@ -66,7 +66,7 @@
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 7
+      "mesh_messages": 9
     }
   ],
   "germany-nrw": [
@@ -79,7 +79,7 @@
   "galicia": [
     {
       "date": "2026-11-06",
-      "status": "LIVE_OTHER",
+      "status": "IDLE",
       "mesh_messages": 0
     }
   ],
@@ -87,7 +87,7 @@
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 3
+      "mesh_messages": 4
     }
   ],
   "spain": [
@@ -156,8 +156,8 @@
   "cromesh": [
     {
       "date": "2026-11-06",
-      "status": "IDLE",
-      "mesh_messages": 0
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 13
     }
   ],
   "northern-michigan": [
@@ -220,14 +220,14 @@
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 3
+      "mesh_messages": 2
     }
   ],
   "sweden": [
     {
       "date": "2026-11-06",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 23
+      "mesh_messages": 12
     }
   ],
   "nashville": [
