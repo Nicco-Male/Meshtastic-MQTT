@@ -16,147 +16,147 @@ footer{margin-top:25px;border-top:1px solid #27374a;padding-top:20px;font-size:1
 <body><main><div class="eyebrow">Open directory · MQTT · Meshtastic</div><h1>Meshtastic MQTT Directory</h1>
 <p>An open, independent directory of Meshtastic community MQTT brokers, automatically checked <strong>once per day</strong> from GitHub Actions. Read-only connections and subscriptions; no publishing and no private MQTT servers.</p>
 <p><strong>Public network map:</strong> Explore Meshtastic MQTT network activity on <a href="https://worldmap.niccomale.it" target="_blank" rel="noopener noreferrer">worldmap.niccomale.it ↗</a>. The map is a separate visualization; broker checks are performed independently.</p>
-<section class="summary"><div class="tile"><div class="number">34</div><div class="detail">Registered brokers</div></div><div class="tile"><div class="number">23</div><div class="detail">Accessible subscriptions</div></div><div class="tile"><div class="number">14</div><div class="detail">Live traffic observed</div></div><div class="tile"><div class="number">5</div><div class="detail">Access restricted (not offline)</div></div></section>
+<section class="summary"><div class="tile"><div class="number">34</div><div class="detail">Registered brokers</div></div><div class="tile"><div class="number">23</div><div class="detail">Accessible subscriptions</div></div><div class="tile"><div class="number">13</div><div class="detail">Live traffic observed</div></div><div class="tile"><div class="number">5</div><div class="detail">Access restricted (not offline)</div></div></section>
 <p class="muted"><strong>Access restricted is not offline:</strong> a broker may be reachable but deny the public account or topic. This directory respects operator access controls and never attempts to bypass them.</p>
-<p class="muted">Last checked: <strong>2026-11-06T13:57:02+00:00</strong> · Probe location: GitHub Actions (reachability may differ from other networks). 30-check availability = share of tests with successful MQTT connection and subscription; not an SLA.</p>
+<p class="muted">Last checked: <strong>2026-11-07T11:44:40+00:00</strong> · Probe location: GitHub Actions (reachability may differ from other networks). 30-check availability = share of tests with successful MQTT connection and subscription; not an SLA.</p>
 <div class="toolbar"><input id="find" type="search" placeholder="Search country, community or hostname…" aria-label="Search brokers"><select id="filter" aria-label="Filter by status"><option value="all">All statuses</option><option value="live">Live traffic</option><option value="idle">Online / idle</option><option value="blocked">Access denied</option><option value="down">Connection issues</option><option value="unknown">Not yet tested</option></select></div>
-<div class="tablewrap"><table><thead><tr><th>Community</th><th>Endpoint / MQTT topics</th><th>MQTT status</th><th>Mesh / other messages</th><th>Last 30 checks</th><th>Last checked / source</th></tr></thead><tbody id="rows"><tr data-filter="am armenia meshtastic armenia mqtt.msh.am" data-status="idle">
+<div class="tablewrap"><table><thead><tr><th>Community</th><th>Endpoint / MQTT topics</th><th>MQTT status</th><th>Mesh / other messages</th><th>Last 30 checks</th><th>Last checked / source</th></tr></thead><tbody id="rows"><tr data-filter="am armenia meshtastic armenia mqtt.msh.am" data-status="live">
 <td><span class="country">AM</span> <strong>Meshtastic Armenia</strong><small>Armenia</small></td>
 <td><code>mqtt.msh.am:1883</code><small>MQTT · Probe subscription: <code>msh/#</code></small></td>
-<td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:58:19 UTC</small><a href="https://msh.am" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="au south australia peering sa mqtt.peeringsa.net" data-status="blocked">
+<td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
+<td class="numeric">1 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:57 UTC</small><a href="https://msh.am" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="au south australia peering sa mqtt.peeringsa.net" data-status="blocked">
 <td><span class="country">AU</span> <strong>Peering SA</strong><small>South Australia</small></td>
 <td><code>mqtt.peeringsa.net:1883</code><small>MQTT · Probe subscription: <code>msh/ANZ/SA/#</code></small><small>Operator-documented publish root: <code>msh/ANZ/SA</code></small></td>
 <td><span class="status blocked">SUBSCRIBE DENIED</span><small>SUBACK denied</small><small class="policy-note">The historical SA:MUG guide publishes an MQTT v3.1.1 uplink account and root msh/ANZ/SA. It does not authorize read access; public SUBSCRIBE is denied.</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-06 13:58:18 UTC</small><a href="https://wiki.samesh.au/meshtastic/mqtt-gateways" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="bg bulgaria bg mesh bgmesh.swat-bg.org" data-status="blocked">
+<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-07 11:45:57 UTC</small><a href="https://wiki.samesh.au/meshtastic/mqtt-gateways" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="bg bulgaria bg mesh bgmesh.swat-bg.org" data-status="blocked">
 <td><span class="country">BG</span> <strong>BG Mesh</strong><small>Bulgaria</small></td>
 <td><code>bgmesh.swat-bg.org:1883</code><small>MQTT · Probe subscription: <code>msh/#</code></small></td>
 <td><span class="status blocked">SUBSCRIBE DENIED</span><small>SUBACK denied</small><small class="policy-note">The operator explicitly specifies uplink-only service with downlink disabled. Public SUBSCRIBE is denied by policy; this is not an outage.</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-06 13:58:18 UTC</small><a href="https://meshmap.motaba.net/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="bg bulgaria motaba bulgaria meshqtt.motaba.net" data-status="live">
+<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-07 11:45:56 UTC</small><a href="https://meshmap.motaba.net/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="bg bulgaria motaba bulgaria meshqtt.motaba.net" data-status="live">
 <td><span class="country">BG</span> <strong>Motaba Bulgaria</strong><small>Bulgaria</small></td>
 <td><code>meshqtt.motaba.net:1883</code><small>MQTT · Probe subscription: <code>msh/Bulgaria/#</code></small></td>
 <td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">2 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:28 UTC</small>—</td></tr><tr data-filter="cl chile mesh chile mqtt.meshchile.cl" data-status="down">
+<td class="numeric">5 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:06 UTC</small>—</td></tr><tr data-filter="cl chile mesh chile mqtt.meshchile.cl" data-status="live">
 <td><span class="country">CL</span> <strong>Mesh Chile</strong><small>Chile</small></td>
 <td><code>mqtt.meshchile.cl:1883</code><small>MQTT · Probe subscription: <code>msh/CL/#</code></small></td>
-<td><span class="status down">TCP TIMEOUT</span><small>Network connection failed (TimeoutError)</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-06 13:58:19 UTC</small><a href="https://meshchile.cl" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="cn china mess host china mqtt.mess.host" data-status="down">
+<td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
+<td class="numeric">4 / 0</td><td class="numeric">50%</td><td><small>2026-11-07 11:45:57 UTC</small><a href="https://meshchile.cl" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="cn china mess host china mqtt.mess.host" data-status="down">
 <td><span class="country">CN</span> <strong>Mess Host China</strong><small>China</small></td>
 <td><code>mqtt.mess.host:1883</code><small>MQTT · Probe subscription: <code>msh/CN/#</code></small></td>
 <td><span class="status down">DNS ERROR</span><small>DNS resolution failed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-06 13:58:08 UTC</small>—</td></tr><tr data-filter="co colombia mesh colombia mqtt.meshcolombia.co" data-status="live">
+<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-07 11:45:51 UTC</small>—</td></tr><tr data-filter="co colombia mesh colombia mqtt.meshcolombia.co" data-status="live">
 <td><span class="country">CO</span> <strong>Mesh Colombia</strong><small>Colombia</small></td>
 <td><code>mqtt.meshcolombia.co:1883</code><small>MQTT · Probe subscription: <code>msh/CO/#</code></small></td>
 <td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">3 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:02 UTC</small><a href="https://meshcolombia.co" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="cz czech republic aperturelab czech republic mqtt.aperturelab.cz" data-status="live">
+<td class="numeric">2 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:44:40 UTC</small><a href="https://meshcolombia.co" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="cz czech republic aperturelab czech republic mqtt.aperturelab.cz" data-status="idle">
 <td><span class="country">CZ</span> <strong>ApertureLab Czech Republic</strong><small>Czech Republic</small></td>
 <td><code>mqtt.aperturelab.cz:1883</code><small>MQTT · Probe subscription: <code>msh/CZ/#</code></small></td>
-<td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">11 / 1</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:02 UTC</small>—</td></tr><tr data-filter="de north rhine-westphalia mesh nrw nrw.iot-root.de" data-status="live">
+<td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
+<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:44:40 UTC</small>—</td></tr><tr data-filter="de north rhine-westphalia mesh nrw nrw.iot-root.de" data-status="live">
 <td><span class="country">DE</span> <strong>Mesh NRW</strong><small>North Rhine-Westphalia</small></td>
 <td><code>nrw.iot-root.de:1883</code><small>MQTT · Probe subscription: <code>msh/#</code></small></td>
 <td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">1418 / 15</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:53 UTC</small><a href="https://nrw.iot-root.de/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="de schleswig-holstein mesh sh mqtt.mesh-sh.de" data-status="live">
+<td class="numeric">1594 / 13</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:32 UTC</small><a href="https://nrw.iot-root.de/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="de schleswig-holstein mesh sh mqtt.mesh-sh.de" data-status="idle">
 <td><span class="country">DE</span> <strong>Mesh SH</strong><small>Schleswig-Holstein</small></td>
 <td><code>mqtt.mesh-sh.de:1883</code><small>MQTT · Probe subscription: <code>msh/EU_868/DE/S-H/#</code></small></td>
-<td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">1 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:02 UTC</small><a href="https://mesh-sh.de" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="es galicia comunidade o zulo mqtt.mesh.comunidadeozulo.org" data-status="live">
+<td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
+<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:44:40 UTC</small><a href="https://mesh-sh.de" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="es galicia comunidade o zulo mqtt.mesh.comunidadeozulo.org" data-status="idle">
 <td><span class="country">ES</span> <strong>Comunidade O Zulo</strong><small>Galicia</small></td>
 <td><code>mqtt.mesh.comunidadeozulo.org:1883</code><small>MQTT · Probe subscription: <code>msh/EU_868/#</code></small></td>
-<td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">3 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:28 UTC</small><a href="https://comunidadeozulo.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="es spain meshtastic spain mqtt.meshtastic.es" data-status="blocked">
+<td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
+<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:06 UTC</small><a href="https://comunidadeozulo.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="es spain meshtastic spain mqtt.meshtastic.es" data-status="blocked">
 <td><span class="country">ES</span> <strong>Meshtastic Spain</strong><small>Spain</small></td>
 <td><code>mqtt.meshtastic.es:1883</code><small>MQTT · Probe subscription: <code>msh/EU_868/#</code></small><small>Operator-documented publish root: <code>msh/EU_868</code></small></td>
 <td><span class="status blocked">ACCESS DENIED</span><small>CONNACK 135</small><small class="policy-note">The operator publishes meshdev credentials and an msh/EU_868 root, with MQTT TLS disabled. These match the catalog. GitHub Actions receives CONNACK 135, before the topic is checked. Public read access is not verified.</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-06 13:57:58 UTC</small><a href="https://meshtastic.es/docs/mapas/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="gb cumbria cumbria cq mqtt.cumbriacq.com" data-status="down">
+<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-07 11:45:37 UTC</small><a href="https://meshtastic.es/docs/mapas/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="gb cumbria cumbria cq mqtt.cumbriacq.com" data-status="down">
 <td><span class="country">GB</span> <strong>Cumbria CQ</strong><small>Cumbria</small></td>
 <td><code>mqtt.cumbriacq.com:1883</code><small>MQTT · Probe subscription: <code>msh/EU_868/#</code></small></td>
 <td><span class="status down">TCP TIMEOUT</span><small>Network connection failed (TimeoutError)</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-06 13:57:53 UTC</small><a href="https://cumbriacq.com" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="hr croatia cromesh mqtt.cromesh.eu" data-status="live">
+<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-07 11:45:32 UTC</small><a href="https://cumbriacq.com" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="hr croatia cromesh mqtt.cromesh.eu" data-status="live">
 <td><span class="country">HR</span> <strong>CroMesh</strong><small>Croatia</small></td>
 <td><code>mqtt.cromesh.eu:1883</code><small>MQTT · Probe subscription: <code>msh/EU_868/9A/#</code></small></td>
 <td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">25 / 2</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:52 UTC</small><a href="https://cromesh.eu" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="it italy loraitalia mqtt.loraitalia.it" data-status="blocked">
+<td class="numeric">12 / 2</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:31 UTC</small><a href="https://cromesh.eu" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="it italy loraitalia mqtt.loraitalia.it" data-status="blocked">
 <td><span class="country">IT</span> <strong>LoRaItalia</strong><small>Italy</small></td>
 <td><code>mqtt.loraitalia.it:1883</code><small>MQTT · Probe subscription: <code>msh/EU_868/IT/#</code></small><small>Operator-documented publish root: <code>msh/EU_868/{nodeID} (868 MHz); msh/EU_433/{nodeID} (433 MHz)</code></small></td>
 <td><span class="status blocked">SUBSCRIBE DENIED</span><small>SUBACK denied</small><small class="policy-note">Official gateways publish using per-node root topics msh/EU_868/{nodeID} or msh/EU_433/{nodeID} (node ID without &#x27;!&#x27;). The configured msh/EU_868/IT/# filter is only a directory probe, NOT the documented publishing root, and SUBSCRIBE is denied.</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-06 13:58:34 UTC</small><a href="https://www.loraitalia.it/d0b9f8a5-7046-4dfd-bab5-61c6fac55dc8/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="nl netherlands meshnet nl mqtt.meshnet.nl" data-status="down">
+<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-07 11:46:22 UTC</small><a href="https://www.loraitalia.it/d0b9f8a5-7046-4dfd-bab5-61c6fac55dc8/" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="nl netherlands meshnet nl mqtt.meshnet.nl" data-status="down">
 <td><span class="country">NL</span> <strong>MeshNet NL</strong><small>Netherlands</small></td>
 <td><code>mqtt.meshnet.nl:1883</code><small>MQTT · Probe subscription: <code>msh/EU_868/NL/#</code></small></td>
 <td><span class="status down">DNS ERROR</span><small>DNS resolution failed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-06 13:58:19 UTC</small>—</td></tr><tr data-filter="nl netherlands meshtnet nl mqtt.meshtnet.nl" data-status="down">
+<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-07 11:45:57 UTC</small>—</td></tr><tr data-filter="nl netherlands meshtnet nl mqtt.meshtnet.nl" data-status="down">
 <td><span class="country">NL</span> <strong>MeshtNet NL</strong><small>Netherlands</small></td>
 <td><code>mqtt.meshtnet.nl:1883</code><small>MQTT · Probe subscription: <code>msh/EU_868/NL/#</code></small></td>
 <td><span class="status down">DNS ERROR</span><small>DNS resolution failed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-06 13:58:19 UTC</small>—</td></tr><tr data-filter="pl poland loranet poland loranet.pl" data-status="live">
+<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-07 11:45:57 UTC</small>—</td></tr><tr data-filter="pl poland loranet poland loranet.pl" data-status="live">
 <td><span class="country">PL</span> <strong>LoRaNet Poland</strong><small>Poland</small></td>
 <td><code>loranet.pl:1883</code><small>MQTT · Probe subscription: <code>msh/PL/#</code></small></td>
 <td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">255 / 6</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:02 UTC</small><a href="https://loranet.pl" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="pt portugal meshtastic portugal mqtt.meshtastic.pt" data-status="blocked">
+<td class="numeric">171 / 5</td><td class="numeric">100%</td><td><small>2026-11-07 11:44:40 UTC</small><a href="https://loranet.pl" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="pt portugal meshtastic portugal mqtt.meshtastic.pt" data-status="blocked">
 <td><span class="country">PT</span> <strong>Meshtastic Portugal</strong><small>Portugal</small></td>
 <td><code>mqtt.meshtastic.pt:1883</code><small>MQTT · Probe subscription: <code>msh/#</code></small><small>Operator-documented publish root: <code>msh</code></small></td>
 <td><span class="status blocked">ACCESS DENIED</span><small>CONNACK 135</small><small class="policy-note">The operator publishes meshdev credentials and msh as the root, with MQTT TLS disabled. These match the catalog. GitHub Actions receives CONNACK 135, before the subscription. Public read access is not verified.</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-06 13:58:00 UTC</small><a href="https://meshtastic.pt/getstarted" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="pt portugal iot meshtastic portugal iot iot.meshtastic.pt" data-status="down">
+<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-07 11:45:39 UTC</small><a href="https://meshtastic.pt/getstarted" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="pt portugal iot meshtastic portugal iot iot.meshtastic.pt" data-status="down">
 <td><span class="country">PT</span> <strong>Meshtastic Portugal IoT</strong><small>Portugal IoT</small></td>
 <td><code>iot.meshtastic.pt:1883</code><small>MQTT · Probe subscription: <code>msh/#</code></small></td>
 <td><span class="status down">TCP TIMEOUT</span><small>Network connection failed (TimeoutError)</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-06 13:58:01 UTC</small><a href="https://meshtastic.pt" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="ro romania / eu868 meshmap romania mqtt.meshmap.ro" data-status="idle">
+<td class="numeric">0 / 0</td><td class="numeric">0%</td><td><small>2026-11-07 11:45:41 UTC</small><a href="https://meshtastic.pt" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="ro romania / eu868 meshmap romania mqtt.meshmap.ro" data-status="live">
 <td><span class="country">RO</span> <strong>MeshMap Romania</strong><small>Romania / EU868</small></td>
 <td><code>mqtt.meshmap.ro:1883</code><small>MQTT · Probe subscription: <code>msh/EU_868/#</code></small></td>
-<td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:27 UTC</small><a href="https://meshmap.ro" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="se sweden meshat sweden mqtt.meshat.se" data-status="live">
+<td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
+<td class="numeric">4 / 1</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:06 UTC</small><a href="https://meshmap.ro" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="se sweden meshat sweden mqtt.meshat.se" data-status="live">
 <td><span class="country">SE</span> <strong>Meshat Sweden</strong><small>Sweden</small></td>
 <td><code>mqtt.meshat.se:1883</code><small>MQTT · Probe subscription: <code>msh/#</code></small></td>
 <td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">21 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:58:19 UTC</small><a href="https://meshat.se" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="si slovenia meshnet slovenia mqtt.meshnet.si" data-status="idle">
+<td class="numeric">11 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:57 UTC</small><a href="https://meshat.se" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="si slovenia meshnet slovenia mqtt.meshnet.si" data-status="idle">
 <td><span class="country">SI</span> <strong>MeshNet Slovenia</strong><small>Slovenia</small></td>
 <td><code>mqtt.meshnet.si:1883</code><small>MQTT · Probe subscription: <code>msh/EU_868/SI/#</code></small></td>
 <td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:58:19 UTC</small><a href="https://meshnet.si" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us georgia csra mesh mqtt.csramsh.net" data-status="live">
+<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:57 UTC</small><a href="https://meshnet.si" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us georgia csra mesh mqtt.csramsh.net" data-status="down">
 <td><span class="country">US</span> <strong>CSRA Mesh</strong><small>Georgia</small></td>
 <td><code>mqtt.csramsh.net:1883</code><small>MQTT · Probe subscription: <code>msh/US/GA/csramsh/#</code></small></td>
-<td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">2 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:58:08 UTC</small><a href="https://csramsh.net" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us connecticut ct mesh mqtt.ctmesh.org" data-status="idle">
+<td><span class="status down">TCP TIMEOUT</span><small>Network connection failed (TimeoutError)</small></td>
+<td class="numeric">0 / 0</td><td class="numeric">50%</td><td><small>2026-11-07 11:45:51 UTC</small><a href="https://csramsh.net" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us connecticut ct mesh mqtt.ctmesh.org" data-status="idle">
 <td><span class="country">US</span> <strong>CT Mesh</strong><small>Connecticut</small></td>
 <td><code>mqtt.ctmesh.org:1883</code><small>MQTT · Probe subscription: <code>msh/US/CT/#</code></small></td>
 <td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:28 UTC</small><a href="https://ctmesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us chicago, illinois chimesh mqtt.chimesh.org" data-status="live">
+<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:07 UTC</small><a href="https://ctmesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us chicago, illinois chimesh mqtt.chimesh.org" data-status="live">
 <td><span class="country">US</span> <strong>ChiMesh</strong><small>Chicago, Illinois</small></td>
 <td><code>mqtt.chimesh.org:1883</code><small>MQTT · Probe subscription: <code>msh/US/IL/Chi/#</code></small></td>
 <td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">15 / 1</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:02 UTC</small><a href="https://chimesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us st. louis, missouri meshstl mqtt.meshstl.org" data-status="live">
+<td class="numeric">1 / 1</td><td class="numeric">100%</td><td><small>2026-11-07 11:44:40 UTC</small><a href="https://chimesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us st. louis, missouri meshstl mqtt.meshstl.org" data-status="live">
 <td><span class="country">US</span> <strong>MeshSTL</strong><small>St. Louis, Missouri</small></td>
 <td><code>mqtt.meshstl.org:1883</code><small>MQTT · Probe subscription: <code>msh/US/MeshSTL/#</code></small></td>
 <td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">4 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:27 UTC</small><a href="https://meshstl.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us ohio neo mesh mqtt.neomesh.org" data-status="idle">
+<td class="numeric">6 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:06 UTC</small><a href="https://meshstl.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us ohio neo mesh mqtt.neomesh.org" data-status="idle">
 <td><span class="country">US</span> <strong>NEO Mesh</strong><small>Ohio</small></td>
 <td><code>mqtt.neomesh.org:1883</code><small>MQTT · Probe subscription: <code>msh/#</code></small></td>
 <td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:58:19 UTC</small><a href="https://neomesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us new york ny mesh mqtt.nyme.sh" data-status="idle">
+<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:57 UTC</small><a href="https://neomesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us new york ny mesh mqtt.nyme.sh" data-status="idle">
 <td><span class="country">US</span> <strong>NY Mesh</strong><small>New York</small></td>
 <td><code>mqtt.nyme.sh:1883</code><small>MQTT · Probe subscription: <code>msh/US/NY/#</code></small></td>
 <td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:53 UTC</small><a href="https://nyme.sh" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us nashville nashmesh mqtt.nashme.sh" data-status="idle">
+<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:32 UTC</small><a href="https://nyme.sh" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us nashville nashmesh mqtt.nashme.sh" data-status="idle">
 <td><span class="country">US</span> <strong>NashMesh</strong><small>Nashville</small></td>
 <td><code>mqtt.nashme.sh:1883</code><small>MQTT · Probe subscription: <code>msh/#</code></small></td>
 <td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:58:24 UTC</small><a href="https://nashme.sh" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us northern michigan northern michigan mesh mqtt.northernmichmesh.org" data-status="idle">
+<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:57 UTC</small><a href="https://nashme.sh" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us northern michigan northern michigan mesh mqtt.northernmichmesh.org" data-status="idle">
 <td><span class="country">US</span> <strong>Northern Michigan Mesh</strong><small>Northern Michigan</small></td>
 <td><code>mqtt.northernmichmesh.org:8883</code><small>TLS · Probe subscription: <code>msh/US/MI/NMI/#</code></small></td>
 <td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:53 UTC</small><a href="https://northernmichmesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us rock river rock river mesh mqtt.rrmesh.net" data-status="idle">
+<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:32 UTC</small><a href="https://northernmichmesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us rock river rock river mesh mqtt.rrmesh.net" data-status="idle">
 <td><span class="country">US</span> <strong>Rock River Mesh</strong><small>Rock River</small></td>
 <td><code>mqtt.rrmesh.net:1883</code><small>MQTT · Probe subscription: <code>msh/#</code></small></td>
 <td><span class="status idle">ONLINE / IDLE</span><small>SUBACK accepted; no non-retained PUBLISH observed</small></td>
-<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:53 UTC</small><a href="https://rrmesh.net" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us south carolina sc mesh mqtt.scmesh.us" data-status="live">
+<td class="numeric">0 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:32 UTC</small><a href="https://rrmesh.net" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us south carolina sc mesh mqtt.scmesh.us" data-status="live">
 <td><span class="country">US</span> <strong>SC Mesh</strong><small>South Carolina</small></td>
 <td><code>mqtt.scmesh.us:1883</code><small>MQTT · Probe subscription: <code>msh/US/SC/#</code></small></td>
 <td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">3 / 0</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:02 UTC</small><a href="https://scmesh.us" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us southern california socal mesh mqtt.socalmesh.org" data-status="live">
+<td class="numeric">1 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:44:40 UTC</small><a href="https://scmesh.us" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr><tr data-filter="us southern california socal mesh mqtt.socalmesh.org" data-status="live">
 <td><span class="country">US</span> <strong>SoCal Mesh</strong><small>Southern California</small></td>
 <td><code>mqtt.socalmesh.org:1883</code><small>MQTT · Probe subscription: <code>msh/US/CA/socalmesh/#</code></small></td>
 <td><span class="status live">LIVE · MESH</span><small>Non-retained msh/.../2/e/... PUBLISH received</small></td>
-<td class="numeric">9 / 2</td><td class="numeric">100%</td><td><small>2026-11-06 13:57:28 UTC</small><a href="https://socalmesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr></tbody></table></div>
+<td class="numeric">2 / 0</td><td class="numeric">100%</td><td><small>2026-11-07 11:45:06 UTC</small><a href="https://socalmesh.org" target="_blank" rel="noopener noreferrer">Source ↗</a></td></tr></tbody></table></div>
 <h2>How to read the statuses</h2><p><strong>LIVE · MESH</strong> = non-retained PUBLISH observed on <code>msh/.../2/e/...</code> (Protobuf content is not validated). <strong>LIVE / OTHER</strong> = live traffic on other topics. <strong>ONLINE / IDLE</strong> = CONNACK and SUBACK accepted, but no live message received during the observation window. TCP, DNS, TLS and ACL errors are reported separately. One failed probe does not establish a global outage.</p>
 <footer>The directory uses only operator-published public community accounts; it does not store private credentials, MQTT payloads, node identifiers or private broker information. To add or correct a server, open a pull request. <a href="https://github.com/Nicco-Male/Meshtastic-MQTT">Source on GitHub ↗</a></footer>
 </main><script>
