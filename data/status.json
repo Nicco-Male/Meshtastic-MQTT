@@ -1,86 +1,86 @@
 {
-  "checked_at": "2026-11-21T13:29:21+00:00",
+  "checked_at": "2026-11-22T13:22:31+00:00",
   "probe_location": "GitHub Actions ubuntu-latest",
   "results": {
     "colombia": {
-      "status": "LIVE_MESH_TOPIC",
-      "detail": "Non-retained msh/.../2/e/... PUBLISH received",
-      "mesh_messages": 2,
+      "status": "IDLE",
+      "detail": "SUBACK accepted; no non-retained PUBLISH observed",
+      "mesh_messages": 0,
       "other_messages": 0,
       "retained_messages": 4,
       "last_live_at": "2026-11-21T13:29:41+00:00",
-      "duration_ms": 25278,
-      "checked_at": "2026-11-21T13:29:21+00:00"
+      "duration_ms": 25174,
+      "checked_at": "2026-11-22T13:22:31+00:00"
     },
     "south-carolina": {
       "status": "LIVE_MESH_TOPIC",
       "detail": "Non-retained msh/.../2/e/... PUBLISH received",
-      "mesh_messages": 4,
+      "mesh_messages": 3,
       "other_messages": 0,
       "retained_messages": 1,
-      "last_live_at": "2026-11-21T13:29:27+00:00",
-      "duration_ms": 25127,
-      "checked_at": "2026-11-21T13:29:21+00:00"
+      "last_live_at": "2026-11-22T13:22:51+00:00",
+      "duration_ms": 25398,
+      "checked_at": "2026-11-22T13:22:31+00:00"
     },
     "chicago": {
       "status": "LIVE_MESH_TOPIC",
       "detail": "Non-retained msh/.../2/e/... PUBLISH received",
-      "mesh_messages": 9,
-      "other_messages": 0,
+      "mesh_messages": 7,
+      "other_messages": 2,
       "retained_messages": 3,
-      "last_live_at": "2026-11-21T13:29:46+00:00",
-      "duration_ms": 25506,
-      "checked_at": "2026-11-21T13:29:21+00:00"
+      "last_live_at": "2026-11-22T13:22:52+00:00",
+      "duration_ms": 25608,
+      "checked_at": "2026-11-22T13:22:31+00:00"
     },
     "poland-loranet": {
       "status": "LIVE_MESH_TOPIC",
       "detail": "Non-retained msh/.../2/e/... PUBLISH received",
-      "mesh_messages": 310,
-      "other_messages": 8,
+      "mesh_messages": 238,
+      "other_messages": 7,
       "retained_messages": 0,
-      "last_live_at": "2026-11-21T13:29:47+00:00",
-      "duration_ms": 25601,
-      "checked_at": "2026-11-21T13:29:21+00:00"
+      "last_live_at": "2026-11-22T13:22:55+00:00",
+      "duration_ms": 25536,
+      "checked_at": "2026-11-22T13:22:31+00:00"
     },
     "czech": {
       "status": "LIVE_MESH_TOPIC",
       "detail": "Non-retained msh/.../2/e/... PUBLISH received",
-      "mesh_messages": 1,
+      "mesh_messages": 7,
       "other_messages": 0,
       "retained_messages": 0,
-      "last_live_at": "2026-11-21T13:29:26+00:00",
-      "duration_ms": 25597,
-      "checked_at": "2026-11-21T13:29:21+00:00"
+      "last_live_at": "2026-11-22T13:22:56+00:00",
+      "duration_ms": 25761,
+      "checked_at": "2026-11-22T13:22:31+00:00"
     },
     "germany-sh": {
       "status": "LIVE_MESH_TOPIC",
       "detail": "Non-retained msh/.../2/e/... PUBLISH received",
-      "mesh_messages": 4,
+      "mesh_messages": 2,
       "other_messages": 0,
       "retained_messages": 0,
-      "last_live_at": "2026-11-21T13:29:39+00:00",
-      "duration_ms": 25981,
-      "checked_at": "2026-11-21T13:29:21+00:00"
+      "last_live_at": "2026-11-22T13:22:48+00:00",
+      "duration_ms": 25862,
+      "checked_at": "2026-11-22T13:22:31+00:00"
     },
     "st-louis": {
       "status": "LIVE_MESH_TOPIC",
       "detail": "Non-retained msh/.../2/e/... PUBLISH received",
       "mesh_messages": 4,
-      "other_messages": 2,
+      "other_messages": 0,
       "retained_messages": 2,
-      "last_live_at": "2026-11-21T13:29:57+00:00",
-      "duration_ms": 25373,
-      "checked_at": "2026-11-21T13:29:46+00:00"
+      "last_live_at": "2026-11-22T13:23:17+00:00",
+      "duration_ms": 25224,
+      "checked_at": "2026-11-22T13:22:56+00:00"
     },
     "romania": {
-      "status": "IDLE",
-      "detail": "SUBACK accepted; no non-retained PUBLISH observed",
-      "mesh_messages": 0,
+      "status": "LIVE_MESH_TOPIC",
+      "detail": "Non-retained msh/.../2/e/... PUBLISH received",
+      "mesh_messages": 2,
       "other_messages": 0,
       "retained_messages": 0,
-      "last_live_at": "2026-11-20T14:02:36+00:00",
-      "duration_ms": 25629,
-      "checked_at": "2026-11-21T13:29:46+00:00"
+      "last_live_at": "2026-11-22T13:23:07+00:00",
+      "duration_ms": 25859,
+      "checked_at": "2026-11-22T13:22:56+00:00"
     },
     "ctmesh": {
       "status": "IDLE",
@@ -89,28 +89,28 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 25093,
-      "checked_at": "2026-11-21T13:29:47+00:00"
+      "duration_ms": 25281,
+      "checked_at": "2026-11-22T13:22:56+00:00"
     },
     "socal": {
       "status": "LIVE_MESH_TOPIC",
       "detail": "Non-retained msh/.../2/e/... PUBLISH received",
-      "mesh_messages": 32,
-      "other_messages": 1,
+      "mesh_messages": 1,
+      "other_messages": 2,
       "retained_messages": 5,
-      "last_live_at": "2026-11-21T13:30:10+00:00",
-      "duration_ms": 25305,
-      "checked_at": "2026-11-21T13:29:47+00:00"
+      "last_live_at": "2026-11-22T13:23:09+00:00",
+      "duration_ms": 25190,
+      "checked_at": "2026-11-22T13:22:56+00:00"
     },
     "germany-nrw": {
       "status": "LIVE_MESH_TOPIC",
       "detail": "Non-retained msh/.../2/e/... PUBLISH received",
-      "mesh_messages": 3008,
-      "other_messages": 19,
+      "mesh_messages": 1737,
+      "other_messages": 16,
       "retained_messages": 519,
-      "last_live_at": "2026-11-21T13:30:37+00:00",
-      "duration_ms": 25631,
-      "checked_at": "2026-11-21T13:30:12+00:00"
+      "last_live_at": "2026-11-22T13:23:47+00:00",
+      "duration_ms": 26130,
+      "checked_at": "2026-11-22T13:23:21+00:00"
     },
     "galicia": {
       "status": "LIVE_MESH_TOPIC",
@@ -118,19 +118,19 @@
       "mesh_messages": 1,
       "other_messages": 0,
       "retained_messages": 0,
-      "last_live_at": "2026-11-21T13:30:09+00:00",
-      "duration_ms": 25536,
-      "checked_at": "2026-11-21T13:29:47+00:00"
+      "last_live_at": "2026-11-22T13:23:11+00:00",
+      "duration_ms": 25617,
+      "checked_at": "2026-11-22T13:22:56+00:00"
     },
     "bulgaria-motaba": {
       "status": "LIVE_MESH_TOPIC",
       "detail": "Non-retained msh/.../2/e/... PUBLISH received",
-      "mesh_messages": 5,
-      "other_messages": 1,
+      "mesh_messages": 17,
+      "other_messages": 0,
       "retained_messages": 0,
-      "last_live_at": "2026-11-21T13:30:10+00:00",
-      "duration_ms": 25568,
-      "checked_at": "2026-11-21T13:29:47+00:00"
+      "last_live_at": "2026-11-22T13:23:22+00:00",
+      "duration_ms": 25626,
+      "checked_at": "2026-11-22T13:22:56+00:00"
     },
     "spain": {
       "status": "AUTH_REJECTED",
@@ -139,8 +139,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 1251,
-      "checked_at": "2026-11-21T13:30:12+00:00"
+      "duration_ms": 1337,
+      "checked_at": "2026-11-22T13:23:22+00:00"
     },
     "cumbria": {
       "status": "TCP_TIMEOUT",
@@ -149,8 +149,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 5089,
-      "checked_at": "2026-11-21T13:30:12+00:00"
+      "duration_ms": 5092,
+      "checked_at": "2026-11-22T13:23:22+00:00"
     },
     "portugal": {
       "status": "AUTH_REJECTED",
@@ -159,8 +159,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 4620,
-      "checked_at": "2026-11-21T13:30:13+00:00"
+      "duration_ms": 1903,
+      "checked_at": "2026-11-22T13:23:23+00:00"
     },
     "china-mess": {
       "status": "DNS_ERROR",
@@ -169,8 +169,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 143,
-      "checked_at": "2026-11-21T13:30:18+00:00"
+      "duration_ms": 154,
+      "checked_at": "2026-11-22T13:23:27+00:00"
     },
     "portugal-iot": {
       "status": "TCP_TIMEOUT",
@@ -179,8 +179,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 5439,
-      "checked_at": "2026-11-21T13:30:17+00:00"
+      "duration_ms": 5333,
+      "checked_at": "2026-11-22T13:23:25+00:00"
     },
     "bulgaria-bgmesh": {
       "status": "SUBSCRIBE_DENIED",
@@ -189,8 +189,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 854,
-      "checked_at": "2026-11-21T13:30:23+00:00"
+      "duration_ms": 773,
+      "checked_at": "2026-11-22T13:23:31+00:00"
     },
     "australia-sa": {
       "status": "SUBSCRIBE_DENIED",
@@ -199,8 +199,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 778,
-      "checked_at": "2026-11-21T13:30:24+00:00"
+      "duration_ms": 647,
+      "checked_at": "2026-11-22T13:23:31+00:00"
     },
     "netherlands-meshnet": {
       "status": "DNS_ERROR",
@@ -209,8 +209,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 29,
-      "checked_at": "2026-11-21T13:30:24+00:00"
+      "duration_ms": 34,
+      "checked_at": "2026-11-22T13:23:32+00:00"
     },
     "netherlands-meshtnet": {
       "status": "DNS_ERROR",
@@ -219,18 +219,18 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 16,
-      "checked_at": "2026-11-21T13:30:24+00:00"
+      "duration_ms": 20,
+      "checked_at": "2026-11-22T13:23:32+00:00"
     },
     "cromesh": {
-      "status": "LIVE_OTHER",
-      "detail": "Non-retained PUBLISH received, not on msh/.../2/e/...",
+      "status": "IDLE",
+      "detail": "SUBACK accepted; no non-retained PUBLISH observed",
       "mesh_messages": 0,
-      "other_messages": 1,
+      "other_messages": 0,
       "retained_messages": 6,
       "last_live_at": "2026-11-21T13:30:33+00:00",
-      "duration_ms": 25769,
-      "checked_at": "2026-11-21T13:30:12+00:00"
+      "duration_ms": 25482,
+      "checked_at": "2026-11-22T13:23:21+00:00"
     },
     "northern-michigan": {
       "status": "IDLE",
@@ -239,8 +239,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 25495,
-      "checked_at": "2026-11-21T13:30:12+00:00"
+      "duration_ms": 25439,
+      "checked_at": "2026-11-22T13:23:22+00:00"
     },
     "new-york": {
       "status": "IDLE",
@@ -249,8 +249,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 25154,
-      "checked_at": "2026-11-21T13:30:12+00:00"
+      "duration_ms": 25356,
+      "checked_at": "2026-11-22T13:23:22+00:00"
     },
     "rrmesh": {
       "status": "DNS_ERROR",
@@ -259,18 +259,18 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 76,
-      "checked_at": "2026-11-21T13:30:12+00:00"
+      "duration_ms": 59,
+      "checked_at": "2026-11-22T13:23:22+00:00"
     },
     "georgia-csra": {
-      "status": "LIVE_MESH_TOPIC",
-      "detail": "Non-retained msh/.../2/e/... PUBLISH received",
-      "mesh_messages": 2,
+      "status": "IDLE",
+      "detail": "SUBACK accepted; no non-retained PUBLISH observed",
+      "mesh_messages": 0,
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": "2026-11-21T13:30:38+00:00",
-      "duration_ms": 25633,
-      "checked_at": "2026-11-21T13:30:18+00:00"
+      "duration_ms": 25245,
+      "checked_at": "2026-11-22T13:23:27+00:00"
     },
     "armenia": {
       "status": "IDLE",
@@ -279,8 +279,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": "2026-11-19T14:28:09+00:00",
-      "duration_ms": 25561,
-      "checked_at": "2026-11-21T13:30:24+00:00"
+      "duration_ms": 25532,
+      "checked_at": "2026-11-22T13:23:32+00:00"
     },
     "loraitalia": {
       "status": "SUBSCRIBE_DENIED",
@@ -289,8 +289,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 1152,
-      "checked_at": "2026-11-21T13:30:44+00:00"
+      "duration_ms": 2686,
+      "checked_at": "2026-11-22T13:23:58+00:00"
     },
     "slovenia": {
       "status": "IDLE",
@@ -299,8 +299,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 25336,
-      "checked_at": "2026-11-21T13:30:37+00:00"
+      "duration_ms": 25889,
+      "checked_at": "2026-11-22T13:23:46+00:00"
     },
     "neomesh": {
       "status": "IDLE",
@@ -309,28 +309,28 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 25355,
-      "checked_at": "2026-11-21T13:30:37+00:00"
+      "duration_ms": 25226,
+      "checked_at": "2026-11-22T13:23:47+00:00"
     },
     "chile": {
-      "status": "TCP_TIMEOUT",
-      "detail": "Network connection failed (TimeoutError)",
-      "mesh_messages": 0,
-      "other_messages": 0,
-      "retained_messages": 0,
-      "last_live_at": "2026-11-20T14:03:37+00:00",
-      "duration_ms": 5129,
-      "checked_at": "2026-11-21T13:30:37+00:00"
+      "status": "LIVE_MESH_TOPIC",
+      "detail": "Non-retained msh/.../2/e/... PUBLISH received",
+      "mesh_messages": 1,
+      "other_messages": 1,
+      "retained_messages": 1,
+      "last_live_at": "2026-11-22T13:24:09+00:00",
+      "duration_ms": 25572,
+      "checked_at": "2026-11-22T13:23:47+00:00"
     },
     "sweden": {
       "status": "LIVE_MESH_TOPIC",
       "detail": "Non-retained msh/.../2/e/... PUBLISH received",
-      "mesh_messages": 7,
-      "other_messages": 0,
+      "mesh_messages": 2,
+      "other_messages": 1,
       "retained_messages": 11,
-      "last_live_at": "2026-11-21T13:31:00+00:00",
-      "duration_ms": 25437,
-      "checked_at": "2026-11-21T13:30:37+00:00"
+      "last_live_at": "2026-11-22T13:23:53+00:00",
+      "duration_ms": 26179,
+      "checked_at": "2026-11-22T13:23:47+00:00"
     },
     "nashville": {
       "status": "IDLE",
@@ -339,8 +339,8 @@
       "other_messages": 0,
       "retained_messages": 0,
       "last_live_at": null,
-      "duration_ms": 25267,
-      "checked_at": "2026-11-21T13:30:43+00:00"
+      "duration_ms": 25248,
+      "checked_at": "2026-11-22T13:23:52+00:00"
     }
   }
 }
