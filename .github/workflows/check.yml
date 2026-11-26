@@ -77,8 +77,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      actions: read
       pages: write
       id-token: write
+    env:
+      PAGES_ARTIFACT: github-pages-${{ github.run_attempt }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -93,7 +96,29 @@ jobs:
       - name: Upload dashboard
         uses: actions/upload-pages-artifact@v4
         with:
+          name: ${{ env.PAGES_ARTIFACT }}
           path: docs
+      - name: Wait for Pages artifact to become visible
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # Upload finalization can precede visibility in the Actions REST API.
+          for attempt in $(seq 1 12); do
+            if names=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts?name=${PAGES_ARTIFACT}" \
+              --jq '.artifacts[] | select(.expired == false) | .name') &&
+              grep -Fxq -- "$PAGES_ARTIFACT" <<< "$names"; then
+              echo "Pages artifact is visible: $PAGES_ARTIFACT"
+              exit 0
+            fi
+            echo "Waiting for Pages artifact ($attempt/12)"
+            if (( attempt < 12 )); then sleep 5; fi
+          done
+          echo "::error::Pages artifact did not become visible in the Actions API."
+          exit 1
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ env.PAGES_ARTIFACT }}
