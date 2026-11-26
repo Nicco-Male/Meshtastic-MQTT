@@ -102,8 +102,8 @@
     },
     {
       "date": "2026-11-26",
-      "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 3
+      "status": "IDLE",
+      "mesh_messages": 0
     }
   ],
   "south-carolina": [
@@ -209,8 +209,8 @@
     },
     {
       "date": "2026-11-26",
-      "status": "IDLE",
-      "mesh_messages": 0
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 1
     }
   ],
   "chicago": [
@@ -317,7 +317,7 @@
     {
       "date": "2026-11-26",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 6
+      "mesh_messages": 4
     }
   ],
   "poland-loranet": [
@@ -424,7 +424,7 @@
     {
       "date": "2026-11-26",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 124
+      "mesh_messages": 476
     }
   ],
   "czech": [
@@ -530,8 +530,8 @@
     },
     {
       "date": "2026-11-26",
-      "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 7
+      "status": "IDLE",
+      "mesh_messages": 0
     }
   ],
   "germany-sh": [
@@ -638,7 +638,7 @@
     {
       "date": "2026-11-26",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 4
+      "mesh_messages": 8
     }
   ],
   "st-louis": [
@@ -745,7 +745,7 @@
     {
       "date": "2026-11-26",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 4
+      "mesh_messages": 2
     }
   ],
   "romania": [
@@ -1066,7 +1066,7 @@
     {
       "date": "2026-11-26",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 2
+      "mesh_messages": 48
     }
   ],
   "germany-nrw": [
@@ -1173,7 +1173,7 @@
     {
       "date": "2026-11-26",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 1531
+      "mesh_messages": 1554
     }
   ],
   "galicia": [
@@ -1280,7 +1280,7 @@
     {
       "date": "2026-11-26",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 9
+      "mesh_messages": 5
     }
   ],
   "bulgaria-motaba": [
@@ -1387,7 +1387,7 @@
     {
       "date": "2026-11-26",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 6
+      "mesh_messages": 2
     }
   ],
   "spain": [
@@ -2884,8 +2884,8 @@
     },
     {
       "date": "2026-11-26",
-      "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 2
+      "status": "IDLE",
+      "mesh_messages": 0
     }
   ],
   "armenia": [
@@ -2991,8 +2991,8 @@
     },
     {
       "date": "2026-11-26",
-      "status": "IDLE",
-      "mesh_messages": 0
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 5
     }
   ],
   "loraitalia": [
@@ -3420,7 +3420,7 @@
     {
       "date": "2026-11-26",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 1
+      "mesh_messages": 4
     }
   ],
   "sweden": [
@@ -3527,7 +3527,7 @@
     {
       "date": "2026-11-26",
       "status": "LIVE_MESH_TOPIC",
-      "mesh_messages": 6
+      "mesh_messages": 4
     }
   ],
   "nashville": [
