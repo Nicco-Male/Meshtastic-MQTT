@@ -109,6 +109,11 @@
       "date": "2026-11-27",
       "status": "IDLE",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 8
     }
   ],
   "south-carolina": [
@@ -221,6 +226,11 @@
       "date": "2026-11-27",
       "status": "LIVE_MESH_TOPIC",
       "mesh_messages": 1
+    },
+    {
+      "date": "2026-11-28",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 4
     }
   ],
   "chicago": [
@@ -333,6 +343,11 @@
       "date": "2026-11-27",
       "status": "LIVE_OTHER",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 2
     }
   ],
   "poland-loranet": [
@@ -445,6 +460,11 @@
       "date": "2026-11-27",
       "status": "LIVE_MESH_TOPIC",
       "mesh_messages": 303
+    },
+    {
+      "date": "2026-11-28",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 550
     }
   ],
   "czech": [
@@ -557,6 +577,11 @@
       "date": "2026-11-27",
       "status": "LIVE_MESH_TOPIC",
       "mesh_messages": 4
+    },
+    {
+      "date": "2026-11-28",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 3
     }
   ],
   "germany-sh": [
@@ -667,6 +692,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 6
+    },
+    {
+      "date": "2026-11-28",
       "status": "LIVE_MESH_TOPIC",
       "mesh_messages": 6
     }
@@ -781,6 +811,11 @@
       "date": "2026-11-27",
       "status": "LIVE_MESH_TOPIC",
       "mesh_messages": 2
+    },
+    {
+      "date": "2026-11-28",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 6
     }
   ],
   "romania": [
@@ -891,6 +926,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "IDLE",
+      "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
       "status": "IDLE",
       "mesh_messages": 0
     }
@@ -1005,6 +1045,11 @@
       "date": "2026-11-27",
       "status": "IDLE",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "IDLE",
+      "mesh_messages": 0
     }
   ],
   "socal": [
@@ -1117,6 +1162,11 @@
       "date": "2026-11-27",
       "status": "IDLE",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 2
     }
   ],
   "germany-nrw": [
@@ -1229,6 +1279,11 @@
       "date": "2026-11-27",
       "status": "LIVE_MESH_TOPIC",
       "mesh_messages": 1463
+    },
+    {
+      "date": "2026-11-28",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 1399
     }
   ],
   "galicia": [
@@ -1339,6 +1394,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 2
+    },
+    {
+      "date": "2026-11-28",
       "status": "LIVE_MESH_TOPIC",
       "mesh_messages": 2
     }
@@ -1453,6 +1513,11 @@
       "date": "2026-11-27",
       "status": "LIVE_MESH_TOPIC",
       "mesh_messages": 5
+    },
+    {
+      "date": "2026-11-28",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 5
     }
   ],
   "spain": [
@@ -1563,6 +1628,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "AUTH_REJECTED",
+      "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
       "status": "AUTH_REJECTED",
       "mesh_messages": 0
     }
@@ -1677,6 +1747,11 @@
       "date": "2026-11-27",
       "status": "TCP_TIMEOUT",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "TCP_TIMEOUT",
+      "mesh_messages": 0
     }
   ],
   "portugal": [
@@ -1787,6 +1862,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "AUTH_REJECTED",
+      "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
       "status": "AUTH_REJECTED",
       "mesh_messages": 0
     }
@@ -1901,6 +1981,11 @@
       "date": "2026-11-27",
       "status": "DNS_ERROR",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "DNS_ERROR",
+      "mesh_messages": 0
     }
   ],
   "portugal-iot": [
@@ -2011,6 +2096,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "TCP_TIMEOUT",
+      "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
       "status": "TCP_TIMEOUT",
       "mesh_messages": 0
     }
@@ -2125,6 +2215,11 @@
       "date": "2026-11-27",
       "status": "SUBSCRIBE_DENIED",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "SUBSCRIBE_DENIED",
+      "mesh_messages": 0
     }
   ],
   "australia-sa": [
@@ -2235,6 +2330,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "SUBSCRIBE_DENIED",
+      "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
       "status": "SUBSCRIBE_DENIED",
       "mesh_messages": 0
     }
@@ -2349,6 +2449,11 @@
       "date": "2026-11-27",
       "status": "DNS_ERROR",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "DNS_ERROR",
+      "mesh_messages": 0
     }
   ],
   "netherlands-meshtnet": [
@@ -2459,6 +2564,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "DNS_ERROR",
+      "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
       "status": "DNS_ERROR",
       "mesh_messages": 0
     }
@@ -2573,6 +2683,11 @@
       "date": "2026-11-27",
       "status": "LIVE_MESH_TOPIC",
       "mesh_messages": 18
+    },
+    {
+      "date": "2026-11-28",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 1
     }
   ],
   "northern-michigan": [
@@ -2683,6 +2798,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "IDLE",
+      "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
       "status": "IDLE",
       "mesh_messages": 0
     }
@@ -2797,6 +2917,11 @@
       "date": "2026-11-27",
       "status": "IDLE",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "IDLE",
+      "mesh_messages": 0
     }
   ],
   "rrmesh": [
@@ -2907,6 +3032,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "DNS_ERROR",
+      "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
       "status": "DNS_ERROR",
       "mesh_messages": 0
     }
@@ -3021,6 +3151,11 @@
       "date": "2026-11-27",
       "status": "IDLE",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "IDLE",
+      "mesh_messages": 0
     }
   ],
   "armenia": [
@@ -3131,6 +3266,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "IDLE",
+      "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
       "status": "IDLE",
       "mesh_messages": 0
     }
@@ -3245,6 +3385,11 @@
       "date": "2026-11-27",
       "status": "SUBSCRIBE_DENIED",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "SUBSCRIBE_DENIED",
+      "mesh_messages": 0
     }
   ],
   "slovenia": [
@@ -3355,6 +3500,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "IDLE",
+      "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
       "status": "IDLE",
       "mesh_messages": 0
     }
@@ -3469,6 +3619,11 @@
       "date": "2026-11-27",
       "status": "IDLE",
       "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
+      "status": "IDLE",
+      "mesh_messages": 0
     }
   ],
   "chile": [
@@ -3579,6 +3734,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 2
+    },
+    {
+      "date": "2026-11-28",
       "status": "LIVE_MESH_TOPIC",
       "mesh_messages": 2
     }
@@ -3693,6 +3853,11 @@
       "date": "2026-11-27",
       "status": "LIVE_MESH_TOPIC",
       "mesh_messages": 7
+    },
+    {
+      "date": "2026-11-28",
+      "status": "LIVE_MESH_TOPIC",
+      "mesh_messages": 3
     }
   ],
   "nashville": [
@@ -3803,6 +3968,11 @@
     },
     {
       "date": "2026-11-27",
+      "status": "IDLE",
+      "mesh_messages": 0
+    },
+    {
+      "date": "2026-11-28",
       "status": "IDLE",
       "mesh_messages": 0
     }

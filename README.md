@@ -34,9 +34,9 @@ The table below is generated automatically from the registry and latest daily ob
 | AU | `mqtt.peeringsa.net:1883` | `msh/ANZ/SA/#` | **SUBSCRIBE DENIED** | 0% |
 | BG | `bgmesh.swat-bg.org:1883` | `msh/#` | **SUBSCRIBE DENIED** | 0% |
 | BG | `meshqtt.motaba.net:1883` | `msh/Bulgaria/#` | **LIVE · MESH** | 100% |
-| CL | `mqtt.meshchile.cl:1883` | `msh/CL/#` | **LIVE · MESH** | 82% |
+| CL | `mqtt.meshchile.cl:1883` | `msh/CL/#` | **LIVE · MESH** | 83% |
 | CN | `mqtt.mess.host:1883` | `msh/CN/#` | **DNS ERROR** | 0% |
-| CO | `mqtt.meshcolombia.co:1883` | `msh/CO/#` | **ONLINE / IDLE** | 100% |
+| CO | `mqtt.meshcolombia.co:1883` | `msh/CO/#` | **LIVE · MESH** | 100% |
 | CZ | `mqtt.aperturelab.cz:1883` | `msh/CZ/#` | **LIVE · MESH** | 100% |
 | DE | `nrw.iot-root.de:1883` | `msh/#` | **LIVE · MESH** | 100% |
 | DE | `mqtt.mesh-sh.de:1883` | `msh/EU_868/DE/S-H/#` | **LIVE · MESH** | 100% |
@@ -53,9 +53,9 @@ The table below is generated automatically from the registry and latest daily ob
 | RO | `mqtt.meshmap.ro:1883` | `msh/EU_868/#` | **ONLINE / IDLE** | 100% |
 | SE | `mqtt.meshat.se:1883` | `msh/#` | **LIVE · MESH** | 100% |
 | SI | `mqtt.meshnet.si:1883` | `msh/EU_868/SI/#` | **ONLINE / IDLE** | 100% |
-| US | `mqtt.csramsh.net:1883` | `msh/US/GA/csramsh/#` | **ONLINE / IDLE** | 95% |
+| US | `mqtt.csramsh.net:1883` | `msh/US/GA/csramsh/#` | **ONLINE / IDLE** | 96% |
 | US | `mqtt.ctmesh.org:1883` | `msh/US/CT/#` | **ONLINE / IDLE** | 100% |
-| US | `mqtt.chimesh.org:1883` | `msh/US/IL/Chi/#` | **LIVE / OTHER** | 95% |
+| US | `mqtt.chimesh.org:1883` | `msh/US/IL/Chi/#` | **LIVE · MESH** | 96% |
 | US | `mqtt.meshstl.org:1883` | `msh/US/MeshSTL/#` | **LIVE · MESH** | 100% |
 | US | `mqtt.neomesh.org:1883` | `msh/#` | **ONLINE / IDLE** | 100% |
 | US | `mqtt.nyme.sh:1883` | `msh/US/NY/#` | **ONLINE / IDLE** | 100% |
@@ -63,7 +63,7 @@ The table below is generated automatically from the registry and latest daily ob
 | US | `mqtt.northernmichmesh.org:8883` | `msh/US/MI/NMI/#` | **ONLINE / IDLE** | 100% |
 | US | `mqtt.rrmesh.net:1883` | `msh/#` | **DNS ERROR** | 9% |
 | US | `mqtt.scmesh.us:1883` | `msh/US/SC/#` | **LIVE · MESH** | 100% |
-| US | `mqtt.socalmesh.org:1883` | `msh/US/CA/socalmesh/#` | **ONLINE / IDLE** | 100% |
+| US | `mqtt.socalmesh.org:1883` | `msh/US/CA/socalmesh/#` | **LIVE · MESH** | 100% |
 <!-- STATUS_TABLE_END -->
 
 ## Why do some brokers deny access?
